@@ -5,10 +5,12 @@ This is a simple static website. It can be uploaded to GoDaddy with ordinary fil
 ## Files
 
 - `index.html` is the home page.
-- `websites.html`, `resources.html`, and `about.html` are the other pages.
+- `about.html`, `resources.html`, `projects.html`, and `files.html` are the main interior pages.
+- `angel-flight.html` and `world-record.html` are starter pages linked from Projects.
 - `css/styles.css` controls the layout, spacing, colors, and mobile behavior.
 - `images/` contains the graphics used by the site.
-- `files/` contains downloadable PDFs and ZIP files used by the Resources page.
+- `site-files/` contains PDFs and ZIP files linked from public site pages such as Resources.
+- `files/` is reserved for ad hoc shared downloads linked from the Files page.
 
 ## Common Edits
 
@@ -35,4 +37,5 @@ Upload these files and folders together:
 - all `.html` files
 - `css/`
 - `images/`
+- `site-files/`
 - `files/`
