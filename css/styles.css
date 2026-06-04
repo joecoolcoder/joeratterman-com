@@ -713,6 +713,71 @@ a {
   padding: 42px 48px;
 }
 
+.angel-flight-page {
+  max-width: 980px;
+  padding-bottom: 108px;
+}
+
+.angel-section {
+  margin-bottom: 32px;
+  padding: 42px 48px;
+  background: #f7f7fb;
+  border: 1px solid #e4e4ef;
+}
+
+.angel-section h1,
+.angel-section h2 {
+  margin: 0 0 18px;
+  color: #202020;
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.15;
+}
+
+.angel-section h1 {
+  font-size: clamp(34px, 4vw, 52px);
+}
+
+.angel-section p {
+  margin: 0;
+  color: #565656;
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.angel-section p + p {
+  margin-top: 18px;
+}
+
+.angel-mission-total {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.angel-mission-total strong {
+  color: var(--accent);
+  font-size: clamp(54px, 8vw, 92px);
+  line-height: 1;
+}
+
+.angel-section-header {
+  max-width: 720px;
+  margin-bottom: 28px;
+}
+
+.mission-report-placeholder {
+  color: #666666;
+  cursor: default;
+  border-style: dashed;
+}
+
+.mission-report-placeholder:hover,
+.mission-report-placeholder:focus-visible {
+  border-color: #e3e3ec;
+  transform: none;
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -826,6 +891,11 @@ a {
   .record-gallery-grid {
     grid-template-columns: 1fr;
   }
+
+  .angel-mission-total {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 620px) {
@@ -902,6 +972,14 @@ a {
 
   .record-stats {
     grid-template-columns: 1fr;
+  }
+
+  .angel-flight-page {
+    padding-bottom: 72px;
+  }
+
+  .angel-section {
+    padding: 32px 24px;
   }
 
   .runner-list ul {
