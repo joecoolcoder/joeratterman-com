@@ -7,10 +7,11 @@
   <meta name="description" content="Privacy policy for Folder Looper.">
   <style>
     :root {
-      --blue: #0f68ff;
+      --blue: #1769f5;
       --ink: #07142f;
-      --muted: #566174;
-      --line: #dfe5ef;
+      --muted: #5b6473;
+      --line: #dfe4ec;
+      --paper: #ffffff;
     }
 
     * {
@@ -19,67 +20,224 @@
 
     body {
       margin: 0;
-      background: #ffffff;
+      background:
+        radial-gradient(circle at 18% 0%, rgba(23, 105, 245, 0.08), transparent 28%),
+        radial-gradient(circle at 100% 10%, rgba(48, 171, 255, 0.08), transparent 30%),
+        #ffffff;
       color: var(--ink);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
 
     main {
-      width: min(760px, calc(100% - 36px));
+      width: min(980px, calc(100% - 40px));
       margin: 0 auto;
-      padding: 56px 0;
+      padding: 54px 0 44px;
+    }
+
+    .policy-header {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 1fr);
+      gap: 34px;
+      align-items: center;
+      margin-bottom: 42px;
+    }
+
+    .app-icon {
+      display: block;
+      width: 150px;
+      height: 150px;
+      border-radius: 23%;
+      box-shadow: 0 18px 42px rgba(0, 70, 180, 0.24);
     }
 
     h1 {
-      margin: 0 0 18px;
-      font-size: clamp(34px, 6vw, 54px);
+      margin: 0 0 12px;
+      color: #071226;
+      font-size: clamp(38px, 6vw, 58px);
       line-height: 1;
+      letter-spacing: -0.035em;
+    }
+
+    .updated {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.45;
+    }
+
+    .intro {
+      max-width: 720px;
+      margin: 0;
+      color: #1b2435;
+      font-size: 19px;
+      line-height: 1.6;
+    }
+
+    .policy-list {
+      background: var(--paper);
+      border-top: 1px solid var(--line);
+    }
+
+    .policy-section {
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr);
+      gap: 30px;
+      padding: 38px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .policy-icon {
+      display: grid;
+      place-items: start center;
+      color: var(--blue);
+      padding-top: 4px;
+    }
+
+    .policy-icon svg {
+      width: 46px;
+      height: 46px;
+      stroke: currentColor;
+      stroke-width: 1.9;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
 
     h2 {
-      margin: 34px 0 12px;
-      font-size: 24px;
+      margin: 0 0 16px;
+      color: #071226;
+      font-size: clamp(24px, 3vw, 29px);
+      line-height: 1.2;
+      letter-spacing: -0.015em;
     }
 
     p {
       margin: 0 0 16px;
-      color: var(--muted);
-      font-size: 18px;
-      line-height: 1.6;
+      color: #1c2433;
+      font-size: 19px;
+      line-height: 1.58;
     }
 
-    a {
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 32px;
       color: var(--blue);
+      font-size: 17px;
       font-weight: 700;
       text-decoration: none;
     }
 
-    .panel {
-      margin-top: 30px;
-      padding: 28px 30px;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      background: #f8fbff;
+    @media (max-width: 720px) {
+      main {
+        width: min(100% - 30px, 980px);
+        padding-top: 34px;
+      }
+
+      .policy-header {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        text-align: center;
+      }
+
+      .app-icon {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+      }
+
+      .intro {
+        margin: 0 auto;
+      }
+
+      .policy-section {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 30px 0;
+      }
+
+      .policy-icon {
+        place-items: start;
+      }
+
+      p {
+        font-size: 17px;
+      }
     }
   </style>
 </head>
 <body>
   <main>
-    <h1>Folder Looper Privacy Policy</h1>
-    <p>Folder Looper does not require account creation and does not collect personal information.</p>
+    <header class="policy-header">
+      <img class="app-icon" src="assets/icon-1024.png" alt="Folder Looper app icon">
+      <div>
+        <h1>Folder Looper Privacy Policy</h1>
+        <p class="updated">Last updated: May 24, 2025</p>
+        <p class="intro">Your privacy is important. This Privacy Policy explains how Folder Looper ("the App") handles information when you use it.</p>
+      </div>
+    </header>
 
-    <section class="panel">
-      <h2>Information Collection</h2>
-      <p>Folder Looper does not collect, sell, or share personal information.</p>
+    <section class="policy-list" aria-label="Privacy policy sections">
+      <article class="policy-section">
+        <div class="policy-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 3 20 6v5c0 5-3.3 8.5-8 10-4.7-1.5-8-5-8-10V6z"></path></svg>
+        </div>
+        <div>
+          <h2>1. Information We Collect</h2>
+          <p>Folder Looper does not collect, store, or transmit any personal information or user data to the developer or any third parties.</p>
+          <p>The App does not use analytics, advertising, or any third-party SDKs that collect data.</p>
+        </div>
+      </article>
 
-      <h2>Files and Audio</h2>
-      <p>Audio files selected through the Files app remain on your device or in the storage location you choose. Folder Looper uses access to play the files you select and does not upload them to a server.</p>
+      <article class="policy-section">
+        <div class="policy-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M3 7h6l2 2h10v11H3z"></path><path d="M3 7V5h7l2 2"></path></svg>
+        </div>
+        <div>
+          <h2>2. Access to Your Files</h2>
+          <p>Folder Looper allows you to choose a folder using the system file picker.</p>
+          <p>The App accesses audio files only within the folder you select.</p>
+          <p>Folder Looper does not access any other files or folders on your device.</p>
+          <p>Audio files remain on your device and are never transmitted anywhere.</p>
+        </div>
+      </article>
 
-      <h2>Contact</h2>
-      <p>Questions about this privacy policy can be sent to <a href="mailto:therattermans@hotmail.com">therattermans@hotmail.com</a>.</p>
+      <article class="policy-section">
+        <div class="policy-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path><path d="M12 14v3"></path></svg>
+        </div>
+        <div>
+          <h2>3. Data Security</h2>
+          <p>Since Folder Looper does not collect or transmit any data, there is no data stored on our servers.</p>
+          <p>All processing happens locally on your device.</p>
+        </div>
+      </article>
+
+      <article class="policy-section">
+        <div class="policy-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"></circle><path d="M5 21a7 7 0 0 1 14 0"></path></svg>
+        </div>
+        <div>
+          <h2>4. Your Choices</h2>
+          <p>You control the folders you choose in the App. You can remove access to any folder at any time by selecting a different folder or revoking access in iOS Settings.</p>
+        </div>
+      </article>
+
+      <article class="policy-section">
+        <div class="policy-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a14 14 0 0 1 0 18"></path><path d="M12 3a14 14 0 0 0 0 18"></path></svg>
+        </div>
+        <div>
+          <h2>5. Changes to This Policy</h2>
+          <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last updated" date.</p>
+        </div>
+      </article>
     </section>
 
-    <p><a href="index.html">Back to Folder Looper Support</a></p>
+    <a class="back-link" href="index.html">Back to Folder Looper Support</a>
   </main>
 </body>
 </html>
