@@ -778,6 +778,50 @@ a {
   transform: none;
 }
 
+.song-writing-page {
+  max-width: 980px;
+  padding-bottom: 108px;
+}
+
+.song-intro .button-link {
+  margin-top: 26px;
+}
+
+.song-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.song-card {
+  padding: 28px 30px;
+  background: #ffffff;
+  border: 1px solid #e3e3ec;
+}
+
+.song-card img {
+  display: block;
+  width: 100%;
+  margin-bottom: 22px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.song-card h3 {
+  margin: 0 0 12px;
+  color: #202020;
+  font-size: clamp(23px, 2.4vw, 30px);
+  line-height: 1.15;
+}
+
+.song-card p {
+  margin-bottom: 22px;
+}
+
+.song-link {
+  padding: 15px 17px;
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -978,8 +1022,20 @@ a {
     padding-bottom: 72px;
   }
 
+  .song-writing-page {
+    padding-bottom: 72px;
+  }
+
   .angel-section {
     padding: 32px 24px;
+  }
+
+  .song-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .song-card {
+    padding: 24px 22px;
   }
 
   .runner-list ul {
