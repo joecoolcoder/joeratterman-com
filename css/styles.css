@@ -814,6 +814,7 @@ a {
 
 .now-playing-section audio {
   width: 100%;
+  height: 48px;
 }
 
 .song-grid {
