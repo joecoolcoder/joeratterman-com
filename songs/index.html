@@ -26,23 +26,39 @@
     <section class="angel-section song-intro">
       <h1>Song Writing</h1>
       <p>Since retiring from my corporate career, I've learned to play the cajon and bass guitar, and frequently have the opportunity to serve on the worship team at my church. I've also discovered a passion for writing worship songs with a focus on lyrics inspired by biblical passages. Some of the songs I’ve written have even been performed by friends and colleagues at their churches.</p>
-      <p>I love to see vivid stories come together in a song, and important truths about faith put to melody. When a song gets stuck in your head, that message will have a chance to anchor itself in your heart as well. Music is one of the most effective ways to share God’s word and let his message be heard, understood and spread freely. Our Worship Wagon ministry has shown me just how impactful music can be on a weary soul.</p>
-      <p>Several of the songs I’ve written are linked below. The links will open audio MP3 files, and they should play directly in your browser. If your browser can’t play the file for some reason, you can still download the MP3 instead.</p>
+      <p>I love to see vivid stories come together in a song, and important truths about faith put to melody. When a song gets stuck in your head, that message will have a chance to anchor itself in your heart as well. Music is one of the most effective ways to share God’s word and let His message be heard, understood and spread freely. Several of the songs I’ve written are linked below.</p>
+    </section>
+
+    <section class="angel-section now-playing-section" aria-label="Now playing">
+      <div class="now-playing-copy">
+        <span>Now Playing</span>
+        <strong id="now-playing-title">Select a song</strong>
+      </div>
+      <audio id="song-player" controls preload="none"></audio>
+      <a id="now-playing-lyrics" class="song-lyrics-button now-playing-lyrics now-playing-lyrics-text" href="#" title="View lyrics ..." aria-label="View lyrics" hidden>Lyrics</a>
     </section>
 
     <section class="angel-section">
       <div class="song-grid" aria-label="Favorite song links">
         <article class="song-card">
-          <a class="song-art-link" title="Play the song now ..." href="audio-files/Sing%20to%20the%20Lord.mp3" target="_blank" rel="noopener" aria-label="Play Sing to the Lord">
+          <a class="song-art-link" title="Play the song now ..." href="audio-files/Sing%20to%20the%20Lord.mp3" target="_blank" rel="noopener" aria-label="Play Sing to the Lord" data-song-title="Sing to the Lord" data-lyrics="audio-files/Sing%20to%20the%20Lord.html">
             <img src="audio-files/sing-to-the-lord-cover.jpg" alt="Sing to the Lord cover art">
           </a>
           <div class="song-actions">
-            <a class="song-play-button" title="Play the song now ..." href="audio-files/Sing%20to%20the%20Lord.mp3" target="_blank" rel="noopener">Play Song</a>
+            <a class="song-play-button" title="Play the song now ..." href="audio-files/Sing%20to%20the%20Lord.mp3" target="_blank" rel="noopener" data-song-title="Sing to the Lord" data-lyrics="audio-files/Sing%20to%20the%20Lord.html">Play Song</a>
             <a class="song-download-button" href="audio-files/Sing%20to%20the%20Lord.mp3" download aria-label="Download Sing to the Lord" title="Download the song ...">
               <svg aria-hidden="true" viewBox="0 0 24 24">
                 <path d="M12 3v11"></path>
                 <path d="m7 10 5 5 5-5"></path>
                 <path d="M5 19h14"></path>
+              </svg>
+            </a>
+            <a class="song-lyrics-button" href="audio-files/Sing%20to%20the%20Lord.html" aria-label="View lyrics for Sing to the Lord" title="View lyrics ..." data-lyrics-title="Sing to the Lord">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M7 3h7l4 4v14H7z"></path>
+                <path d="M14 3v5h5"></path>
+                <path d="M10 12h6"></path>
+                <path d="M10 16h6"></path>
               </svg>
             </a>
           </div>
@@ -51,16 +67,24 @@
         </article>
 
         <article class="song-card">
-          <a class="song-art-link" title="Play the song now ..." href="audio-files/You%20Wrote%20to%20Me.mp3" target="_blank" rel="noopener" aria-label="Play You Wrote to Me">
+          <a class="song-art-link" title="Play the song now ..." href="audio-files/You%20Wrote%20to%20Me.mp3" target="_blank" rel="noopener" aria-label="Play You Wrote to Me" data-song-title="You Wrote to Me" data-lyrics="audio-files/You%20Wrote%20to%20Me.html">
             <img src="audio-files/you-wrote-to-me-cover.jpg" alt="You Wrote to Me cover art">
           </a>
           <div class="song-actions">
-            <a class="song-play-button" title="Play the song now ..." href="audio-files/You%20Wrote%20to%20Me.mp3" target="_blank" rel="noopener">Play Song</a>
+            <a class="song-play-button" title="Play the song now ..." href="audio-files/You%20Wrote%20to%20Me.mp3" target="_blank" rel="noopener" data-song-title="You Wrote to Me" data-lyrics="audio-files/You%20Wrote%20to%20Me.html">Play Song</a>
             <a class="song-download-button" href="audio-files/You%20Wrote%20to%20Me.mp3" download aria-label="Download You Wrote to Me" title="Download the song ...">
               <svg aria-hidden="true" viewBox="0 0 24 24">
                 <path d="M12 3v11"></path>
                 <path d="m7 10 5 5 5-5"></path>
                 <path d="M5 19h14"></path>
+              </svg>
+            </a>
+            <a class="song-lyrics-button" href="audio-files/You%20Wrote%20to%20Me.html" aria-label="View lyrics for You Wrote to Me" title="View lyrics ..." data-lyrics-title="You Wrote to Me">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M7 3h7l4 4v14H7z"></path>
+                <path d="M14 3v5h5"></path>
+                <path d="M10 12h6"></path>
+                <path d="M10 16h6"></path>
               </svg>
             </a>
           </div>
@@ -69,16 +93,24 @@
         </article>
 
         <article class="song-card">
-          <a class="song-art-link" title="Play the song now ..." href="audio-files/Give%20Them%20Away.mp3" target="_blank" rel="noopener" aria-label="Play Give Them Away">
+          <a class="song-art-link" title="Play the song now ..." href="audio-files/Give%20Them%20Away.mp3" target="_blank" rel="noopener" aria-label="Play Give Them Away" data-song-title="Give Them Away" data-lyrics="audio-files/Give%20Them%20Away.html">
             <img src="audio-files/give-them-away-cover.jpg" alt="Give Them Away cover art">
           </a>
           <div class="song-actions">
-            <a class="song-play-button" title="Play the song now ..." href="audio-files/Give%20Them%20Away.mp3" target="_blank" rel="noopener">Play Song</a>
+            <a class="song-play-button" title="Play the song now ..." href="audio-files/Give%20Them%20Away.mp3" target="_blank" rel="noopener" data-song-title="Give Them Away" data-lyrics="audio-files/Give%20Them%20Away.html">Play Song</a>
             <a class="song-download-button" href="audio-files/Give%20Them%20Away.mp3" download aria-label="Download Give Them Away" title="Download the song ...">
               <svg aria-hidden="true" viewBox="0 0 24 24">
                 <path d="M12 3v11"></path>
                 <path d="m7 10 5 5 5-5"></path>
                 <path d="M5 19h14"></path>
+              </svg>
+            </a>
+            <a class="song-lyrics-button" href="audio-files/Give%20Them%20Away.html" aria-label="View lyrics for Give Them Away" title="View lyrics ..." data-lyrics-title="Give Them Away">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M7 3h7l4 4v14H7z"></path>
+                <path d="M14 3v5h5"></path>
+                <path d="M10 12h6"></path>
+                <path d="M10 16h6"></path>
               </svg>
             </a>
           </div>
@@ -87,16 +119,24 @@
         </article>
 
         <article class="song-card">
-          <a class="song-art-link" title="Play the song now ..." href="audio-files/By%20Faith.mp3" target="_blank" rel="noopener" aria-label="Play By Faith">
+          <a class="song-art-link" title="Play the song now ..." href="audio-files/By%20Faith.mp3" target="_blank" rel="noopener" aria-label="Play By Faith" data-song-title="By Faith" data-lyrics="audio-files/By%20Faith.html">
             <img src="audio-files/by-faith-cover.jpg" alt="By Faith cover art">
           </a>
           <div class="song-actions">
-            <a class="song-play-button" title="Play the song now ..." href="audio-files/By%20Faith.mp3" target="_blank" rel="noopener">Play Song</a>
+            <a class="song-play-button" title="Play the song now ..." href="audio-files/By%20Faith.mp3" target="_blank" rel="noopener" data-song-title="By Faith" data-lyrics="audio-files/By%20Faith.html">Play Song</a>
             <a class="song-download-button" href="audio-files/By%20Faith.mp3" download aria-label="Download By Faith" title="Download the song ...">
               <svg aria-hidden="true" viewBox="0 0 24 24">
                 <path d="M12 3v11"></path>
                 <path d="m7 10 5 5 5-5"></path>
                 <path d="M5 19h14"></path>
+              </svg>
+            </a>
+            <a class="song-lyrics-button" href="audio-files/By%20Faith.html" aria-label="View lyrics for By Faith" title="View lyrics ..." data-lyrics-title="By Faith">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M7 3h7l4 4v14H7z"></path>
+                <path d="M14 3v5h5"></path>
+                <path d="M10 12h6"></path>
+                <path d="M10 16h6"></path>
               </svg>
             </a>
           </div>
@@ -105,16 +145,24 @@
         </article>
 
         <article class="song-card">
-          <a class="song-art-link" title="Play the song now ..." href="audio-files/Satan%27s%20Gonna%20Lose.mp3" target="_blank" rel="noopener" aria-label="Play Satan's Gonna Lose">
+          <a class="song-art-link" title="Play the song now ..." href="audio-files/Satan%27s%20Gonna%20Lose.mp3" target="_blank" rel="noopener" aria-label="Play Satan's Gonna Lose" data-song-title="Satan's Gonna Lose" data-lyrics="audio-files/Satan%27s%20Gonna%20Lose.html">
             <img src="audio-files/satan-s-gonna-lose-cover.jpg" alt="Satan's Gonna Lose cover art">
           </a>
           <div class="song-actions">
-            <a class="song-play-button" title="Play the song now ..." href="audio-files/Satan%27s%20Gonna%20Lose.mp3" target="_blank" rel="noopener">Play Song</a>
+            <a class="song-play-button" title="Play the song now ..." href="audio-files/Satan%27s%20Gonna%20Lose.mp3" target="_blank" rel="noopener" data-song-title="Satan's Gonna Lose" data-lyrics="audio-files/Satan%27s%20Gonna%20Lose.html">Play Song</a>
             <a class="song-download-button" href="audio-files/Satan%27s%20Gonna%20Lose.mp3" download aria-label="Download Satan's Gonna Lose" title="Download the song ...">
               <svg aria-hidden="true" viewBox="0 0 24 24">
                 <path d="M12 3v11"></path>
                 <path d="m7 10 5 5 5-5"></path>
                 <path d="M5 19h14"></path>
+              </svg>
+            </a>
+            <a class="song-lyrics-button" href="audio-files/Satan%27s%20Gonna%20Lose.html" aria-label="View lyrics for Satan's Gonna Lose" title="View lyrics ..." data-lyrics-title="Satan's Gonna Lose">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M7 3h7l4 4v14H7z"></path>
+                <path d="M14 3v5h5"></path>
+                <path d="M10 12h6"></path>
+                <path d="M10 16h6"></path>
               </svg>
             </a>
           </div>
@@ -123,16 +171,24 @@
         </article>
 
         <article class="song-card">
-          <a class="song-art-link" title="Play the song now ..." href="audio-files/Stronger%20than%20the%20Grave.mp3" target="_blank" rel="noopener" aria-label="Play Stronger than the Grave">
+          <a class="song-art-link" title="Play the song now ..." href="audio-files/Stronger%20than%20the%20Grave.mp3" target="_blank" rel="noopener" aria-label="Play Stronger than the Grave" data-song-title="Stronger than the Grave" data-lyrics="audio-files/Stronger%20than%20the%20Grave.html">
             <img src="audio-files/stronger-than-the-grave-cover.jpg" alt="Stronger than the Grave cover art">
           </a>
           <div class="song-actions">
-            <a class="song-play-button" title="Play the song now ..." href="audio-files/Stronger%20than%20the%20Grave.mp3" target="_blank" rel="noopener">Play Song</a>
+            <a class="song-play-button" title="Play the song now ..." href="audio-files/Stronger%20than%20the%20Grave.mp3" target="_blank" rel="noopener" data-song-title="Stronger than the Grave" data-lyrics="audio-files/Stronger%20than%20the%20Grave.html">Play Song</a>
             <a class="song-download-button" href="audio-files/Stronger%20than%20the%20Grave.mp3" download aria-label="Download Stronger than the Grave" title="Download the song ...">
               <svg aria-hidden="true" viewBox="0 0 24 24">
                 <path d="M12 3v11"></path>
                 <path d="m7 10 5 5 5-5"></path>
                 <path d="M5 19h14"></path>
+              </svg>
+            </a>
+            <a class="song-lyrics-button" href="audio-files/Stronger%20than%20the%20Grave.html" aria-label="View lyrics for Stronger than the Grave" title="View lyrics ..." data-lyrics-title="Stronger than the Grave">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M7 3h7l4 4v14H7z"></path>
+                <path d="M14 3v5h5"></path>
+                <path d="M10 12h6"></path>
+                <path d="M10 16h6"></path>
               </svg>
             </a>
           </div>
@@ -141,16 +197,24 @@
         </article>
 
         <article class="song-card">
-          <a class="song-art-link" title="Play the song now ..." href="audio-files/The%20Right%20Girl.mp3" target="_blank" rel="noopener" aria-label="Play The Right Girl">
+          <a class="song-art-link" title="Play the song now ..." href="audio-files/The%20Right%20Girl.mp3" target="_blank" rel="noopener" aria-label="Play The Right Girl" data-song-title="The Right Girl" data-lyrics="audio-files/The%20Right%20Girl.html">
             <img src="audio-files/the-right-girl-cover.jpg" alt="The Right Girl cover art">
           </a>
           <div class="song-actions">
-            <a class="song-play-button" title="Play the song now ..." href="audio-files/The%20Right%20Girl.mp3" target="_blank" rel="noopener">Play Song</a>
+            <a class="song-play-button" title="Play the song now ..." href="audio-files/The%20Right%20Girl.mp3" target="_blank" rel="noopener" data-song-title="The Right Girl" data-lyrics="audio-files/The%20Right%20Girl.html">Play Song</a>
             <a class="song-download-button" href="audio-files/The%20Right%20Girl.mp3" download aria-label="Download The Right Girl" title="Download the song ...">
               <svg aria-hidden="true" viewBox="0 0 24 24">
                 <path d="M12 3v11"></path>
                 <path d="m7 10 5 5 5-5"></path>
                 <path d="M5 19h14"></path>
+              </svg>
+            </a>
+            <a class="song-lyrics-button" href="audio-files/The%20Right%20Girl.html" aria-label="View lyrics for The Right Girl" title="View lyrics ..." data-lyrics-title="The Right Girl">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M7 3h7l4 4v14H7z"></path>
+                <path d="M14 3v5h5"></path>
+                <path d="M10 12h6"></path>
+                <path d="M10 16h6"></path>
               </svg>
             </a>
           </div>
@@ -168,5 +232,89 @@
   <footer class="site-footer">
     <p>Copyright © 2010-2026 joeratterman.com</p>
   </footer>
+
+  <div class="lyrics-modal" id="lyrics-modal" hidden>
+    <div class="lyrics-modal-backdrop" data-close-lyrics></div>
+    <div class="lyrics-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="lyrics-modal-title">
+      <div class="lyrics-modal-header">
+        <h2 id="lyrics-modal-title">Lyrics</h2>
+        <button class="lyrics-modal-close" type="button" data-close-lyrics aria-label="Close lyrics">Close</button>
+      </div>
+      <iframe id="lyrics-frame" title="Song lyrics"></iframe>
+    </div>
+  </div>
+
+  <script>
+    const songPlayer = document.getElementById("song-player");
+    const nowPlayingTitle = document.getElementById("now-playing-title");
+    const nowPlayingLyrics = document.getElementById("now-playing-lyrics");
+    const lyricsModal = document.getElementById("lyrics-modal");
+    const lyricsModalTitle = document.getElementById("lyrics-modal-title");
+    const lyricsFrame = document.getElementById("lyrics-frame");
+    const playLinks = document.querySelectorAll(".song-art-link, .song-play-button");
+    const lyricsLinks = document.querySelectorAll(".song-lyrics-button");
+
+    playLinks.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        const songUrl = link.getAttribute("href");
+        const songTitle = link.dataset.songTitle || "Selected song";
+        const lyricsUrl = link.dataset.lyrics;
+
+        nowPlayingTitle.textContent = songTitle;
+        if (lyricsUrl) {
+          nowPlayingLyrics.hidden = false;
+          nowPlayingLyrics.setAttribute("href", lyricsUrl);
+          nowPlayingLyrics.dataset.lyricsTitle = songTitle;
+        } else {
+          nowPlayingLyrics.hidden = true;
+          nowPlayingLyrics.removeAttribute("href");
+          delete nowPlayingLyrics.dataset.lyricsTitle;
+        }
+
+        if (songPlayer.getAttribute("src") !== songUrl) {
+          songPlayer.setAttribute("src", songUrl);
+        }
+        songPlayer.play().catch(() => {
+          songPlayer.controls = true;
+        });
+      });
+    });
+
+    const openLyrics = (url, title) => {
+      lyricsModal.hidden = false;
+      lyricsModalTitle.textContent = `${title} Lyrics`;
+      lyricsFrame.setAttribute("src", url);
+      document.body.classList.add("lyrics-modal-open");
+    };
+
+    const closeLyrics = () => {
+      lyricsModal.hidden = true;
+      lyricsFrame.removeAttribute("src");
+      document.body.classList.remove("lyrics-modal-open");
+    };
+
+    lyricsLinks.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        const lyricsUrl = link.getAttribute("href");
+        const lyricsTitle = link.dataset.lyricsTitle || nowPlayingTitle.textContent || "Song";
+        if (lyricsUrl && lyricsUrl !== "#") {
+          openLyrics(lyricsUrl, lyricsTitle);
+        }
+      });
+    });
+
+    document.querySelectorAll("[data-close-lyrics]").forEach((control) => {
+      control.addEventListener("click", closeLyrics);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !lyricsModal.hidden) {
+        closeLyrics();
+      }
+    });
+  </script>
+
 </body>
 </html>
