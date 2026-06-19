@@ -251,11 +251,22 @@
     const lyricsLinks = document.querySelectorAll(".song-lyrics-button");
 
     const resetPlayer = (songUrl) => {
+      const startAtBeginning = () => {
+        try {
+          songPlayer.currentTime = 0;
+        } catch {
+          // Some browsers only allow seeking after audio metadata is available.
+        }
+      };
+
       songPlayer.pause();
       songPlayer.removeAttribute("src");
       songPlayer.load();
       songPlayer.setAttribute("src", songUrl);
+      songPlayer.addEventListener("loadedmetadata", startAtBeginning, { once: true });
+      songPlayer.addEventListener("durationchange", startAtBeginning, { once: true });
       songPlayer.load();
+      startAtBeginning();
     };
 
     playLinks.forEach((link) => {
