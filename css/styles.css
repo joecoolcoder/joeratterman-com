@@ -900,6 +900,7 @@ a {
   transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease, transform 150ms ease;
 }
 
+.song-play-button,
 .song-download-button,
 .song-lyrics-button {
   width: 34px;
@@ -918,6 +919,7 @@ a {
   padding: 8px 12px;
 }
 
+.song-play-button svg,
 .song-download-button svg,
 .song-lyrics-button svg {
   width: 17px;
@@ -927,6 +929,11 @@ a {
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+.song-play-button svg {
+  fill: currentColor;
+  stroke: none;
 }
 
 .song-play-button:hover,
