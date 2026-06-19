@@ -94,7 +94,7 @@ a {
 }
 
 .home-main {
-  padding-bottom: 108px;
+  padding-bottom: 56px;
 }
 
 .hero-image {
@@ -111,7 +111,7 @@ a {
 
 .content-page {
   min-height: 52vh;
-  padding-bottom: 108px;
+  padding-bottom: 56px;
 }
 
 .content-section {
@@ -177,7 +177,7 @@ a {
 
 .about-modern-page {
   max-width: 1240px;
-  padding-bottom: 108px;
+  padding-bottom: 56px;
 }
 
 .about-modern-hero {
@@ -355,7 +355,7 @@ a {
 
 .resources-page {
   max-width: 1240px;
-  padding-bottom: 108px;
+  padding-bottom: 56px;
 }
 
 .resources-hero {
@@ -503,7 +503,7 @@ a {
 
 .record-page {
   max-width: 1240px;
-  padding-bottom: 108px;
+  padding-bottom: 56px;
 }
 
 .record-hero {
@@ -715,7 +715,7 @@ a {
 
 .angel-flight-page {
   max-width: 980px;
-  padding-bottom: 108px;
+  padding-bottom: 56px;
 }
 
 .angel-section {
@@ -780,7 +780,7 @@ a {
 
 .song-writing-page {
   max-width: 1240px;
-  padding-bottom: 108px;
+  padding-bottom: 56px;
 }
 
 .song-intro .button-link {
@@ -1018,30 +1018,15 @@ a {
   overflow: hidden;
 }
 
-.song-suno-section {
-  padding: 28px 32px;
-}
-
-.song-suno-section p {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  align-items: center;
-}
-
-.song-suno-section .button-link {
-  margin-top: 0;
-}
-
 .site-footer {
-  display: flex;
-  justify-content: space-between;
+  display: block;
   width: min(1360px, calc(100% - 48px));
   margin: 0 auto;
-  padding: 0 0 78px;
+  padding: 0 0 36px;
   color: var(--muted);
   font-size: 16px;
   letter-spacing: 0.12em;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -1063,7 +1048,7 @@ a {
 
   .home-main,
   .content-page {
-    padding-bottom: 72px;
+    padding-bottom: 44px;
   }
 
   .about-modern-hero,
@@ -1191,11 +1176,11 @@ a {
   }
 
   .about-modern-page {
-    padding-bottom: 72px;
+    padding-bottom: 44px;
   }
 
   .resources-page {
-    padding-bottom: 72px;
+    padding-bottom: 44px;
   }
 
   .about-modern-hero {
@@ -1215,7 +1200,7 @@ a {
   }
 
   .record-page {
-    padding-bottom: 72px;
+    padding-bottom: 44px;
   }
 
   .record-section,
@@ -1230,11 +1215,11 @@ a {
   }
 
   .angel-flight-page {
-    padding-bottom: 72px;
+    padding-bottom: 44px;
   }
 
   .song-writing-page {
-    padding-bottom: 72px;
+    padding-bottom: 44px;
   }
 
   .angel-section {
@@ -1277,10 +1262,8 @@ a {
   }
 
   .site-footer {
-    display: block;
-    padding-bottom: 46px;
+    padding-bottom: 30px;
     font-size: 13px;
     line-height: 1.9;
-    text-align: center;
   }
 }
