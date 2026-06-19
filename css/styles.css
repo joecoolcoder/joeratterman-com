@@ -919,7 +919,6 @@ a {
   padding: 8px 12px;
 }
 
-.song-play-button svg,
 .song-download-button svg,
 .song-lyrics-button svg {
   width: 17px;
@@ -931,9 +930,15 @@ a {
   stroke-linejoin: round;
 }
 
-.song-play-button svg {
-  fill: currentColor;
-  stroke: none;
+.song-play-button::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 11px solid currentColor;
 }
 
 .song-play-button:hover,
