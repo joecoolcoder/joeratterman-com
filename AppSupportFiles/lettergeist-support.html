@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LetterGeist Support</title>
+  <meta name="description" content="Support page for LetterGeist, a word-guessing game for iPhone.">
+  <style>
+    :root {
+      --blue: #137da3;
+      --ink: #07142f;
+      --muted: #5b6473;
+      --line: #dfe4ec;
+      --soft: #f3fbfe;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    main {
+      width: min(920px, calc(100% - 36px));
+      margin: 0 auto;
+      padding: 54px 0 44px;
+    }
+
+    header {
+      margin-bottom: 34px;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      color: #071226;
+      font-size: clamp(42px, 7vw, 68px);
+      line-height: 0.98;
+      letter-spacing: -0.035em;
+    }
+
+    .tagline {
+      max-width: 620px;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(21px, 3vw, 28px);
+      line-height: 1.35;
+    }
+
+    .panel {
+      margin-top: 22px;
+      padding: 30px 34px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    h2 {
+      margin: 0 0 20px;
+      color: #071226;
+      font-size: clamp(25px, 3vw, 32px);
+      line-height: 1.15;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      color: var(--blue);
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0 0 16px;
+      color: #1c2433;
+      font-size: 18px;
+      line-height: 1.58;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: var(--blue);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus-visible {
+      text-decoration: underline;
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px 30px;
+      margin: 0;
+      padding-left: 21px;
+      color: #1c2433;
+      font-size: 18px;
+      line-height: 1.45;
+    }
+
+    li {
+      padding-left: 2px;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px 34px;
+    }
+
+    .support-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    @media (max-width: 720px) {
+      main {
+        padding-top: 36px;
+      }
+
+      .panel {
+        padding: 24px 22px;
+      }
+
+      ul,
+      .faq-grid,
+      .support-grid {
+        grid-template-columns: 1fr;
+      }
+
+      p,
+      ul {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>LetterGeist Support</h1>
+      <p class="tagline">Guess the word and save Gavin.</p>
+    </header>
+
+    <section class="panel" aria-labelledby="features-title">
+      <h2 id="features-title">Features</h2>
+      <ul>
+        <li>Single-player and pass-and-play two-player games</li>
+        <li>A variety of built-in word packs</li>
+        <li>Normal and timed game modes</li>
+        <li>Adjustable word difficulty and fading speed</li>
+        <li>Stored hints and optional Free Dictionary definitions</li>
+        <li>Reveal rewards earned through winning streaks</li>
+        <li>Multiple scenic skins and Gavin skin tones</li>
+        <li>Game statistics and word-pack progress</li>
+        <li>Optional sound effects and haptic feedback</li>
+        <li>Light and dark appearance support</li>
+      </ul>
+    </section>
+
+    <section class="panel" aria-labelledby="faq-title">
+      <h2 id="faq-title">Frequently Asked Questions</h2>
+      <div class="faq-grid">
+        <article>
+          <h3>How do I play?</h3>
+          <p>Choose letters and numbers to reveal every matching character in the answer. Solve the answer before Gavin fades completely or time runs out.</p>
+        </article>
+        <article>
+          <h3>Why is Word Difficulty unavailable?</h3>
+          <p>Difficulty filtering is available for the Basic Words pack. Category-based word packs generally do not include difficulty ratings.</p>
+        </article>
+        <article>
+          <h3>How does Reveal work?</h3>
+          <p>Reveal uncovers one undiscovered character. In single-player games, it becomes available through winning streaks. Two-player matches can enable Reveal during match setup.</p>
+        </article>
+        <article>
+          <h3>Where do hints come from?</h3>
+          <p>Some answers include a hint stored with the App. Single-player games may also request a definition from Free Dictionary. Two-player answers and hints are never sent for an online lookup.</p>
+        </article>
+        <article>
+          <h3>Can LetterGeist be played offline?</h3>
+          <p>Yes. The game and stored hints work offline. Free Dictionary definitions require an internet connection and may not be available for every answer.</p>
+        </article>
+        <article>
+          <h3>How do I reset statistics?</h3>
+          <p>Open Statistics and use the Reset Statistics button for all-time, current-session, or selected word-pack records.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="support-grid">
+      <article class="panel">
+        <h2>Privacy</h2>
+        <p>LetterGeist does not require account creation and does not use advertising, analytics, or tracking.</p>
+        <p><a href="lettergeist-privacy.html">View Privacy Policy &gt;</a></p>
+      </article>
+
+      <article class="panel">
+        <h2>Support</h2>
+        <p>Your feedback is appreciated. Send questions, suggestions, and bug reports to:</p>
+        <p><a href="mailto:ratterman.apps@gmail.com">ratterman.apps@gmail.com</a></p>
+        <p>Allow up to 14 business days for responses.</p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
