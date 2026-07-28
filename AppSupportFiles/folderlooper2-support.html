@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Folder Looper Support</title>
+  <meta name="description" content="Support page for Folder Looper, an audio player and practice tool for folders and songs selected from the Files app.">
+  <style>
+    :root {
+      --blue: #1769f5;
+      --ink: #07142f;
+      --muted: #5b6473;
+      --line: #dfe4ec;
+      --soft: #f7faff;
+      --gold: #c98212;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    main {
+      width: min(960px, calc(100% - 36px));
+      margin: 0 auto;
+      padding: 54px 0 44px;
+    }
+
+    header {
+      margin-bottom: 34px;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      color: #071226;
+      font-size: clamp(42px, 7vw, 68px);
+      line-height: 0.98;
+      letter-spacing: -0.02em;
+    }
+
+    .tagline {
+      max-width: 700px;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(21px, 3vw, 28px);
+      line-height: 1.35;
+    }
+
+    .panel {
+      margin-top: 22px;
+      padding: 30px 34px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    h2 {
+      margin: 0 0 20px;
+      color: #071226;
+      font-size: clamp(25px, 3vw, 32px);
+      line-height: 1.15;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      color: var(--blue);
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0 0 16px;
+      color: #1c2433;
+      font-size: 18px;
+      line-height: 1.58;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: var(--blue);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px 30px;
+      margin: 0;
+      padding-left: 21px;
+      color: #1c2433;
+      font-size: 18px;
+      line-height: 1.45;
+    }
+
+    li {
+      padding-left: 2px;
+    }
+
+    .intro-grid,
+    .faq-grid,
+    .support-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px 34px;
+    }
+
+    .note {
+      border-left: 4px solid var(--gold);
+      padding-left: 16px;
+    }
+
+    @media (max-width: 720px) {
+      main {
+        padding-top: 36px;
+      }
+
+      .panel {
+        padding: 24px 22px;
+      }
+
+      ul,
+      .intro-grid,
+      .faq-grid,
+      .support-grid {
+        grid-template-columns: 1fr;
+      }
+
+      p,
+      ul {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Folder Looper Support</h1>
+      <p class="tagline">Play folders from the Files app, then switch into Practice mode to slow down, transpose, repeat, and study one song at a time.</p>
+    </header>
+
+    <section class="panel" aria-labelledby="overview-title">
+      <h2 id="overview-title">About Folder Looper</h2>
+      <div class="intro-grid">
+        <article>
+          <h3>Player</h3>
+          <p>Choose a folder from the Files app and Folder Looper continuously plays the supported audio files inside. Browse the play order, jump to a track, reshuffle, and keep listening with background playback.</p>
+        </article>
+        <article>
+          <h3>Practice</h3>
+          <p>Choose one song, or bring the current Player song into Practice. Adjust speed, transpose between keys, repeat the song, and view detected key and tempo details as a helpful rehearsal starting point.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="features-title">
+      <h2 id="features-title">Features</h2>
+      <ul>
+        <li>Play audio files directly from folders selected in the Files app</li>
+        <li>Supports MP3, WAV, AAC, AIF, AIFF, CAF, and M4A formats</li>
+        <li>Continuous folder playback with optional shuffle</li>
+        <li>Browse play order, jump to any song, and reshuffle anytime</li>
+        <li>Practice mode for working on one song at a time</li>
+        <li>Speed control from 50% to 150% in Practice mode</li>
+        <li>Transpose practice songs from one key to another</li>
+        <li>Repeat a practice song continuously</li>
+        <li>Detect key and tempo for supported audio files</li>
+        <li>Display embedded song artwork when available</li>
+        <li>Background audio, Now Playing, and remote playback controls</li>
+        <li>Remembers your selected folder and playback preferences</li>
+      </ul>
+    </section>
+
+    <section class="panel" aria-labelledby="faq-title">
+      <h2 id="faq-title">Frequently Asked Questions</h2>
+      <div class="faq-grid">
+        <article>
+          <h3>What audio formats are supported?</h3>
+          <p>Folder Looper supports MP3, WAV, AAC, AIF, AIFF, CAF, and M4A audio files.</p>
+        </article>
+        <article>
+          <h3>Where can my audio files be stored?</h3>
+          <p>Audio files can be stored locally on your device, in iCloud Drive, or in other locations accessible through the Files app.</p>
+        </article>
+        <article>
+          <h3>Does playback continue when the screen is locked?</h3>
+          <p>Yes. Folder Looper supports background audio playback, Now Playing information, and remote playback controls.</p>
+        </article>
+        <article>
+          <h3>Can I shuffle playback?</h3>
+          <p>Yes. Shuffle mode can be enabled or disabled at any time. You can also open Play Order to view upcoming songs, jump to a track, or reshuffle.</p>
+        </article>
+        <article>
+          <h3>What is Practice mode?</h3>
+          <p>Practice mode focuses on a single song. You can slow it down, speed it up, transpose it, repeat it, and use detected key and tempo details while practicing.</p>
+        </article>
+        <article>
+          <h3>How accurate are key and tempo detection?</h3>
+          <p>Key and tempo are estimates based on the audio signal. Results can vary with recording quality, arrangements, intros, outros, live recordings, modulations, and layered instruments.</p>
+        </article>
+        <article>
+          <h3>Why do some songs show artwork and others do not?</h3>
+          <p>Folder Looper displays artwork when it is embedded in the song file metadata. If a file does not include artwork, the app shows default artwork instead.</p>
+        </article>
+        <article>
+          <h3>Do I need to import a folder into a library?</h3>
+          <p>No. Folder Looper works directly with folders you choose in the Files app. Practice songs are copied into app storage so they can be processed for speed and key changes.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel note" aria-labelledby="detection-title">
+      <h2 id="detection-title">Key and Tempo Detection</h2>
+      <p>Detection results are designed to be useful starting points for practice, not final musical authority. Use them as guidance, then adjust by ear when needed.</p>
+    </section>
+
+    <section class="support-grid">
+      <article class="panel">
+        <h2>Privacy</h2>
+        <p>Folder Looper does not require account creation and does not collect personal information.</p>
+        <p><a href="folderlooper-privacy.html">View Privacy Policy &gt;</a></p>
+      </article>
+
+      <article class="panel">
+        <h2>Support</h2>
+        <p>Your feedback is appreciated. Send questions, suggestions, and bug reports to:</p>
+        <p><a href="mailto:ratterman.apps@gmail.com">ratterman.apps@gmail.com</a></p>
+        <p>Allow up to 14 business days for responses.</p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
