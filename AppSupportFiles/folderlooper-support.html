@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Folder Looper Support</title>
-  <meta name="description" content="Support page for Folder Looper, a simple audio player for folders selected in the Files app.">
+  <meta name="description" content="Support page for Folder Looper, an app for folder-based audio playback, practice tools, key detection, tempo detection, and song preparation.">
   <style>
     :root {
       --blue: #1769f5;
@@ -44,7 +44,7 @@
     }
 
     .tagline {
-      max-width: 620px;
+      max-width: 680px;
       margin: 0;
       color: var(--muted);
       font-size: clamp(21px, 3vw, 28px);
@@ -143,22 +143,26 @@
   <main>
     <header>
       <h1>Folder Looper Support</h1>
-      <p class="tagline">Play audio files directly from folders in the Files app.</p>
+      <p class="tagline">Use Player to play audio folders as setlists, then switch to Practice for key, tempo, speed, and transposition tools.</p>
     </header>
 
     <section class="panel" aria-labelledby="features-title">
       <h2 id="features-title">Features</h2>
       <ul>
-        <li>Play audio files directly from folders selected in the Files app</li>
-        <li>Background audio support</li>
-        <li>Supports MP3, WAV, AAC, AIF, AIFF, CAF, and M4A formats</li>
-        <li>Remembers your selected folder between launches</li>
-        <li>Continuous playback through all files in a folder</li>
-        <li>Browse all songs in the selected folder, jump to any track, and reshuffle playback at any time</li>
-        <li>Simple playback controls</li>
-        <li>Apple CarPlay support for playback controls while driving</li>
-        <li>Optional shuffle mode</li>
-        <li>Displays the currently playing track and folder information</li>
+        <li>Use the Player tab to play audio files directly from folders selected in the Files app</li>
+        <li>Build a playable setlist automatically from every supported song in a folder</li>
+        <li>Use shuffle playback, continuous playback, and one-tap reshuffle</li>
+        <li>View play order, jump to any song, and see the current track position</li>
+        <li>Sort songs by numbered file names when shuffle is off</li>
+        <li>See song artwork, fallback artwork, title, artist, folder name, and track count when available</li>
+        <li>Automatically estimate key and tempo for the current Player song</li>
+        <li>Send the current Player song into Practice mode for focused rehearsal</li>
+        <li>Choose a separate practice song from the Files app when needed</li>
+        <li>Detect song key and tempo in Practice mode</li>
+        <li>Transpose from one key to another and see the semitone shift</li>
+        <li>Adjust practice playback speed from 50% to 150%</li>
+        <li>Loop a practice song with repeat mode and use a speed-aware timeline</li>
+        <li>Background audio support with lock screen, Control Center, and Apple CarPlay controls</li>
       </ul>
     </section>
 
@@ -166,20 +170,48 @@
       <h2 id="faq-title">Frequently Asked Questions</h2>
       <div class="faq-grid">
         <article>
+          <h3>What does Folder Looper do?</h3>
+          <p>Folder Looper combines folder-based audio playback with practice tools for musicians, singers, worship teams, and anyone preparing songs from their own audio files.</p>
+        </article>
+        <article>
           <h3>What audio formats are supported?</h3>
-          <p>Folder Looper supports MP3, WAV, AAC, AIF, AIFF, CAF, and M4A audio files.</p>
+          <p>Folder Looper works with common audio file formats supported by iOS, including MP3, WAV, AAC, AIF, AIFF, CAF, and M4A files.</p>
         </article>
         <article>
-          <h3>Where can my audio files be stored?</h3>
-          <p>Audio files can be stored locally on your device, in iCloud Drive, or in other locations accessible through the Files app.</p>
+          <h3>Can playback continue when the screen is locked?</h3>
+          <p>Yes. Folder Looper supports background audio playback, lock screen controls, and Apple CarPlay playback controls.</p>
         </article>
         <article>
-          <h3>Does playback continue when the screen is locked?</h3>
-          <p>Yes. Folder Looper supports background audio playback.</p>
+          <h3>How does Player sorting work?</h3>
+          <p>When shuffle is off, songs with numbered file names sort in number order. Songs without numbers appear after numbered songs.</p>
         </article>
         <article>
-          <h3>Can I shuffle playback?</h3>
-          <p>Yes. Shuffle mode can be enabled or disabled at any time and your preference is remembered between launches.</p>
+          <h3>Can I change the play order?</h3>
+          <p>You can open Play Order to view upcoming songs, jump to a specific track, or reshuffle when shuffle mode is enabled.</p>
+        </article>
+        <article>
+          <h3>How do Player and Practice work together?</h3>
+          <p>When a Player song is selected, you can switch to Practice mode and use that song for key detection, tempo detection, transposition, speed adjustment, and repeat playback.</p>
+        </article>
+        <article>
+          <h3>What happens when I choose a different folder?</h3>
+          <p>Choosing a different Player folder starts a fresh player session and clears the current Practice song.</p>
+        </article>
+        <article>
+          <h3>What do key and tempo detection do?</h3>
+          <p>Folder Looper estimates the musical key and tempo of selected songs locally on your device. Results are intended as helpful practice aids and may vary with recording quality or song arrangement.</p>
+        </article>
+        <article>
+          <h3>Can I slow down a song without changing key?</h3>
+          <p>Yes. Practice mode lets you adjust playback speed from 50% to 150% while keeping key controls separate.</p>
+        </article>
+        <article>
+          <h3>Does the App send my songs anywhere?</h3>
+          <p>No. Your audio files remain on your device. Playback, artwork display, key detection, and tempo detection happen locally.</p>
+        </article>
+        <article>
+          <h3>Where can I get support?</h3>
+          <p>Use the support email below for questions, suggestions, or bug reports.</p>
         </article>
       </div>
     </section>
