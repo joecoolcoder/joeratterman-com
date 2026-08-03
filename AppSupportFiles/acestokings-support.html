@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aces to Kings Support</title>
+  <meta name="description" content="Support page for Aces to Kings, a solitaire game for iPhone.">
+  <style>
+    :root {
+      --blue: #137da3;
+      --ink: #07142f;
+      --muted: #5b6473;
+      --line: #dfe4ec;
+      --soft: #f3fbfe;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    main {
+      width: min(920px, calc(100% - 36px));
+      margin: 0 auto;
+      padding: 54px 0 44px;
+    }
+
+    header {
+      margin-bottom: 34px;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      color: #071226;
+      font-size: clamp(42px, 7vw, 68px);
+      line-height: 0.98;
+      letter-spacing: -0.035em;
+    }
+
+    .tagline {
+      max-width: 620px;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(21px, 3vw, 28px);
+      line-height: 1.35;
+    }
+
+    .panel {
+      margin-top: 22px;
+      padding: 30px 34px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    h2 {
+      margin: 0 0 20px;
+      color: #071226;
+      font-size: clamp(25px, 3vw, 32px);
+      line-height: 1.15;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      color: var(--blue);
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0 0 16px;
+      color: #1c2433;
+      font-size: 18px;
+      line-height: 1.58;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: var(--blue);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus-visible {
+      text-decoration: underline;
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px 30px;
+      margin: 0;
+      padding-left: 21px;
+      color: #1c2433;
+      font-size: 18px;
+      line-height: 1.45;
+    }
+
+    li {
+      padding-left: 2px;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px 34px;
+    }
+
+    .support-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    @media (max-width: 720px) {
+      main {
+        padding-top: 36px;
+      }
+
+      .panel {
+        padding: 24px 22px;
+      }
+
+      ul,
+      .faq-grid,
+      .support-grid {
+        grid-template-columns: 1fr;
+      }
+
+      p,
+      ul {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Aces to Kings Support</h1>
+      <p class="tagline">A focused, elegant take on traditional solitaire.</p>
+    </header>
+
+    <section class="panel" aria-labelledby="features-title">
+      <h2 id="features-title">Features</h2>
+      <ul>
+        <li>Traditional Klondike solitaire gameplay</li>
+        <li>Independent Vegas and Classic 745 games</li>
+        <li>Smart single-tap card and stack movement</li>
+        <li>Drag-and-drop play and Undo</li>
+        <li>Configurable Vegas draw, pass, and scoring rules</li>
+        <li>Classic 745 scoring and accomplishments</li>
+        <li>Optional Auto Finish for resolved games</li>
+        <li>Game statistics and saved progress</li>
+        <li>Multiple card backs and table appearances</li>
+        <li>Optional sound effects and haptic feedback</li>
+      </ul>
+    </section>
+
+    <section class="panel" aria-labelledby="faq-title">
+      <h2 id="faq-title">Frequently Asked Questions</h2>
+      <div class="faq-grid">
+        <article>
+          <h3>How do I play?</h3>
+          <p>Build tableau columns downward in alternating colors. Move Aces through Kings to their matching foundations. Only Kings may be placed in empty tableau columns.</p>
+        </article>
+        <article>
+          <h3>How do I switch games?</h3>
+          <p>Use the game-switching control beside the current game title. Your Vegas and Classic 745 games remain separate, allowing you to move between games without losing their progress.</p>
+        </article>
+        <article>
+          <h3>How does automatic movement work?</h3>
+          <p>Tap an exposed card to move it to a useful legal destination. You can also drag cards and valid card sequences when you want to choose the destination yourself.</p>
+        </article>
+        <article>
+          <h3>What is Auto Finish?</h3>
+          <p>When every remaining card can move safely to the foundations, the Auto Finish button becomes available. You decide whether to use it; the game never finishes automatically.</p>
+        </article>
+        <article>
+          <h3>Can Aces to Kings be played offline?</h3>
+          <p>Yes. Aces to Kings does not require an internet connection for gameplay.</p>
+        </article>
+        <article>
+          <h3>How do I reset statistics?</h3>
+          <p>Open Statistics from the game's tool tray and choose the available reset option for the records you want to clear.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="support-grid">
+      <article class="panel">
+        <h2>Privacy</h2>
+        <p>Aces to Kings does not require account creation and does not use advertising, analytics, or tracking.</p>
+        <p><a href="acestokings-privacy.html">View Privacy Policy &gt;</a></p>
+      </article>
+
+      <article class="panel">
+        <h2>Support</h2>
+        <p>Your feedback is appreciated. Send questions, suggestions, and bug reports to:</p>
+        <p><a href="mailto:ratterman.apps@gmail.com">ratterman.apps@gmail.com</a></p>
+        <p>Allow up to 14 business days for responses.</p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
