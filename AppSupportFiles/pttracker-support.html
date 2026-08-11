@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PT Tracker Support</title>
+  <meta name="description" content="Support page for PT Tracker, a personal physical therapy and exercise routine tracker for iPhone.">
+  <style>
+    :root {
+      --teal: #137da3;
+      --ink: #07142f;
+      --muted: #5b6473;
+      --line: #dfe4ec;
+      --soft: #f3fbfe;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    main {
+      width: min(920px, calc(100% - 36px));
+      margin: 0 auto;
+      padding: 54px 0 44px;
+    }
+
+    header { margin-bottom: 34px; }
+
+    h1 {
+      margin: 0 0 14px;
+      color: #071226;
+      font-size: clamp(42px, 7vw, 68px);
+      line-height: 0.98;
+      letter-spacing: -0.035em;
+    }
+
+    .tagline {
+      max-width: 680px;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(21px, 3vw, 28px);
+      line-height: 1.35;
+    }
+
+    .panel {
+      margin-top: 22px;
+      padding: 30px 34px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    h2 {
+      margin: 0 0 20px;
+      color: #071226;
+      font-size: clamp(25px, 3vw, 32px);
+      line-height: 1.15;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      color: var(--teal);
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0 0 16px;
+      color: #1c2433;
+      font-size: 18px;
+      line-height: 1.58;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    a {
+      color: var(--teal);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus-visible { text-decoration: underline; }
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px 30px;
+      margin: 0;
+      padding-left: 21px;
+      color: #1c2433;
+      font-size: 18px;
+      line-height: 1.45;
+    }
+
+    li { padding-left: 2px; }
+
+    .faq-grid,
+    .support-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px 34px;
+    }
+
+    .support-grid { gap: 22px; }
+
+    @media (max-width: 720px) {
+      main { padding-top: 36px; }
+      .panel { padding: 24px 22px; }
+      ul,
+      .faq-grid,
+      .support-grid { grid-template-columns: 1fr; }
+      p,
+      ul { font-size: 17px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>PT Tracker Support</h1>
+      <p class="tagline">A simple, offline way to plan, complete, and track your personal physical therapy and exercise routines on iPhone.</p>
+    </header>
+
+    <section class="panel" aria-labelledby="features-title">
+      <h2 id="features-title">Features</h2>
+      <ul>
+        <li>Create and organize your own exercise routines</li>
+        <li>Schedule routines for specific days or a number of days each week</li>
+        <li>Follow one exercise and set at a time</li>
+        <li>Use timers for timed exercises and optional elapsed time for each round</li>
+        <li>Track overall days and individual routine history with calendars</li>
+        <li>Reorder, duplicate, reset, export, and import routines</li>
+        <li>Choose exercise categories with clear visual identifiers</li>
+        <li>Keep routines and progress on your iPhone without an account or internet connection</li>
+      </ul>
+    </section>
+
+    <section class="panel" aria-labelledby="faq-title">
+      <h2 id="faq-title">Frequently Asked Questions</h2>
+      <div class="faq-grid">
+        <article>
+          <h3>How do I create a routine?</h3>
+          <p>Tap Add Routine on the Home screen, enter a name and optional description, set the number of rounds, and add the exercises you want to perform.</p>
+        </article>
+        <article>
+          <h3>How do schedules work?</h3>
+          <p>A routine can be suggested for specific days of the week or for a chosen number of days each week. You can also leave the frequency blank for an optional routine.</p>
+        </article>
+        <article>
+          <h3>Can I stop partway through a routine?</h3>
+          <p>Yes. Choose Exit Routine at any time. Your unfinished progress remains available when you continue that routine later the same day.</p>
+        </article>
+        <article>
+          <h3>What do the home-screen colors mean?</h3>
+          <p>Orange means a routine has work remaining for its applicable goal. Green means that goal has been satisfied. A routine with no frequency stays neutral until it has progress for the day.</p>
+        </article>
+        <article>
+          <h3>What is the optional Round Timer?</h3>
+          <p>Enable Round Timer in Settings to see elapsed time for the current round. It pauses when you exit an unfinished round and resumes when you return.</p>
+        </article>
+        <article>
+          <h3>What do the calendars track?</h3>
+          <p>The main calendar tracks overall days. Each routine also has its own history calendar, including completed work on unscheduled days.</p>
+        </article>
+        <article>
+          <h3>Can I back up or share a routine?</h3>
+          <p>Choose Export Routine from a routine’s menu to save a shareable routine file. To restore or share one, start a new routine and choose Import Routine File.</p>
+        </article>
+        <article>
+          <h3>Does PT Tracker need internet access?</h3>
+          <p>No. PT Tracker works offline and stores your routines and progress locally on your iPhone.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="support-grid">
+      <article class="panel">
+        <h2>Privacy</h2>
+        <p>PT Tracker does not require an account and does not use advertising, analytics, or tracking.</p>
+        <p><a href="pttracker-privacy.html">View Privacy Policy &gt;</a></p>
+      </article>
+
+      <article class="panel">
+        <h2>Support</h2>
+        <p>Your feedback is appreciated. Send questions, suggestions, and bug reports to:</p>
+        <p><a href="mailto:ratterman.apps@gmail.com">ratterman.apps@gmail.com</a></p>
+        <p>Allow up to 14 business days for responses.</p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
