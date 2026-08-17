@@ -4,19 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Leg Logger Support</title>
-  <meta name="description" content="Support page for Leg Logger, an app for pilots to log flight leg details.">
+  <meta name="description" content="Support page for Leg Logger, an offline flight leg logger for iPhone.">
   <style>
     :root {
-      --blue: #1769f5;
+      --teal: #137da3;
       --ink: #07142f;
       --muted: #5b6473;
       --line: #dfe4ec;
-      --soft: #f7faff;
+      --soft: #f3fbfe;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -31,9 +29,7 @@
       padding: 54px 0 44px;
     }
 
-    header {
-      margin-bottom: 34px;
-    }
+    header { margin-bottom: 34px; }
 
     h1 {
       margin: 0 0 14px;
@@ -68,7 +64,7 @@
 
     h3 {
       margin: 0 0 8px;
-      color: var(--blue);
+      color: var(--teal);
       font-size: 18px;
       line-height: 1.3;
     }
@@ -80,15 +76,16 @@
       line-height: 1.58;
     }
 
-    p:last-child {
-      margin-bottom: 0;
-    }
+    p:last-child { margin-bottom: 0; }
 
     a {
-      color: var(--blue);
+      color: var(--teal);
       font-weight: 700;
       text-decoration: none;
     }
+
+    a:hover,
+    a:focus-visible { text-decoration: underline; }
 
     ul {
       display: grid;
@@ -101,41 +98,25 @@
       line-height: 1.45;
     }
 
-    li {
-      padding-left: 2px;
-    }
+    li { padding-left: 2px; }
 
-    .faq-grid {
+    .faq-grid,
+    .support-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 28px 34px;
     }
 
-    .support-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-    }
+    .support-grid { gap: 22px; }
 
     @media (max-width: 720px) {
-      main {
-        padding-top: 36px;
-      }
-
-      .panel {
-        padding: 24px 22px;
-      }
-
+      main { padding-top: 36px; }
+      .panel { padding: 24px 22px; }
       ul,
       .faq-grid,
-      .support-grid {
-        grid-template-columns: 1fr;
-      }
-
+      .support-grid { grid-template-columns: 1fr; }
       p,
-      ul {
-        font-size: 17px;
-      }
+      ul { font-size: 17px; }
     }
   </style>
 </head>
@@ -143,20 +124,20 @@
   <main>
     <header>
       <h1>Leg Logger Support</h1>
-      <p class="tagline">Log flight legs and keep clear records for the details pilots track on each flight.</p>
+      <p class="tagline">A focused, offline way to capture flight legs, aircraft details, and optional flight information on iPhone.</p>
     </header>
 
     <section class="panel" aria-labelledby="features-title">
       <h2 id="features-title">Features</h2>
       <ul>
-        <li>Record the details for each leg of a flight</li>
-        <li>Automatic live scanning for HOBBS, fuel, and airport IDs</li>
-        <li>Save multiple aircraft tail numbers on your device</li>
-        <li>Save up to 25 multi-leg flight profiles on your device</li>
-        <li>Reverse Course feature for quickly building return legs</li>
-        <li>Share flight details by text, email, and other system sharing options</li>
-        <li>Designed for quick entry while flight details are fresh</li>
-        <li>No account creation required</li>
+        <li>Record an active flight with tail number, starting airport, Hobbs, and fuel values</li>
+        <li>Add up to six flight legs with airport, Hobbs, and fuel details</li>
+        <li>Optionally log start fuel, start and end times, SIC, night operations, and approaches</li>
+        <li>Use the camera to scan airport identifiers, Hobbs readings, and supported fuel values</li>
+        <li>Attach, name, view, delete, and share flight images</li>
+        <li>Archive, edit, restore, delete, and share completed flights</li>
+        <li>Configure home airport, saved-flight limit, and aircraft-specific avionics and Hobbs types</li>
+        <li>Keep flight records and settings on your iPhone without an account or internet service</li>
       </ul>
     </section>
 
@@ -164,20 +145,36 @@
       <h2 id="faq-title">Frequently Asked Questions</h2>
       <div class="faq-grid">
         <article>
-          <h3>What does Leg Logger do?</h3>
-          <p>Leg Logger helps pilots record the details for each leg of a flight, including aircraft, route, HOBBS, fuel, and airport information.</p>
+          <h3>How do I begin a flight?</h3>
+          <p>On the Active Flight page, enter a tail number and starting Hobbs value, then add or complete leg details as needed. Your configured home airport is used as the starting airport when available.</p>
         </article>
         <article>
-          <h3>Who is Leg Logger for?</h3>
-          <p>Leg Logger is designed for pilots who want a straightforward way to track multi-leg flights and share flight details when needed.</p>
+          <h3>Can I enter details manually?</h3>
+          <p>Yes. All flight values can be typed directly. Camera scanning is optional and is intended to speed up certain airport, Hobbs, and fuel entries.</p>
         </article>
         <article>
-          <h3>Does Leg Logger collect personal information?</h3>
-          <p>No. Leg Logger does not require account creation and does not collect personal information.</p>
+          <h3>Why is a fuel scan not always available?</h3>
+          <p>Fuel scanning depends on the avionics type configured for the current aircraft. When scanning is not supported, enter the fuel value manually.</p>
         </article>
         <article>
-          <h3>Where can I get support?</h3>
-          <p>Use the support email below for questions, suggestions, or bug reports.</p>
+          <h3>How do I save a completed flight?</h3>
+          <p>Tap Save on the Active Flight page. Saved flights appear in Archives, where you can review, edit, share, restore, or delete them.</p>
+        </article>
+        <article>
+          <h3>What does Restore do?</h3>
+          <p>Restore replaces the Active Flight with the archived flight you selected. The confirmation lets you save the current Active Flight first when appropriate.</p>
+        </article>
+        <article>
+          <h3>How do flight images work?</h3>
+          <p>Use Images to capture or manage images for a flight. You can select images to share, or export a complete flight package that includes its report and images.</p>
+        </article>
+        <article>
+          <h3>Where is my data stored?</h3>
+          <p>Leg Logger stores flight records, settings, and saved flight images locally on your iPhone. It does not use an account or a developer-operated online service.</p>
+        </article>
+        <article>
+          <h3>Can I remove my information?</h3>
+          <p>Yes. You can clear the active flight, delete archived flights, or delete individual images in the App. Removing the App also removes its locally stored information.</p>
         </article>
       </div>
     </section>
@@ -185,18 +182,17 @@
     <section class="support-grid">
       <article class="panel">
         <h2>Privacy</h2>
-        <p>Leg Logger does not require account creation and does not collect personal information.</p>
+        <p>Leg Logger does not require an account and does not use advertising, analytics, or tracking.</p>
         <p><a href="leglogger-privacy.html">View Privacy Policy &gt;</a></p>
       </article>
 
       <article class="panel">
         <h2>Support</h2>
-        <p>Your feedback is appreciated. Send questions, suggestions, and/or bug reports to:</p>
+        <p>Your feedback is appreciated. Send questions, suggestions, and bug reports to:</p>
         <p><a href="mailto:ratterman.apps@gmail.com">ratterman.apps@gmail.com</a></p>
         <p>Allow up to 14 business days for responses.</p>
       </article>
     </section>
-
   </main>
 </body>
 </html>
