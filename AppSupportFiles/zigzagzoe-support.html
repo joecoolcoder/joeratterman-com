@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zig Zag Zō Support</title>
+  <meta name="description" content="Support page for Zig Zag Zō, a classic tic-tac-toe game for iPhone.">
+  <style>
+    :root {
+      --brass: #95682c;
+      --ink: #252019;
+      --muted: #70685d;
+      --line: #ded4c3;
+      --soft: #f3ecde;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #fbf8f1;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    main {
+      width: min(920px, calc(100% - 36px));
+      margin: 0 auto;
+      padding: 54px 0 44px;
+    }
+
+    header {
+      margin-bottom: 34px;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      color: #211d17;
+      font-size: clamp(42px, 7vw, 68px);
+      line-height: 0.98;
+      letter-spacing: -0.035em;
+    }
+
+    .tagline {
+      max-width: 650px;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(21px, 3vw, 28px);
+      line-height: 1.35;
+    }
+
+    .panel {
+      margin-top: 22px;
+      padding: 30px 34px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    h2 {
+      margin: 0 0 20px;
+      color: #211d17;
+      font-size: clamp(25px, 3vw, 32px);
+      line-height: 1.15;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      color: var(--brass);
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0 0 16px;
+      color: #373128;
+      font-size: 18px;
+      line-height: 1.58;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: var(--brass);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus-visible {
+      text-decoration: underline;
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px 30px;
+      margin: 0;
+      padding-left: 21px;
+      color: #373128;
+      font-size: 18px;
+      line-height: 1.45;
+    }
+
+    li {
+      padding-left: 2px;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px 34px;
+    }
+
+    .support-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    @media (max-width: 720px) {
+      main {
+        padding-top: 36px;
+      }
+
+      .panel {
+        padding: 24px 22px;
+      }
+
+      ul,
+      .faq-grid,
+      .support-grid {
+        grid-template-columns: 1fr;
+      }
+
+      p,
+      ul {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Zig Zag Zō Support</h1>
+      <p class="tagline">A warm, beautifully crafted take on classic tic-tac-toe for iPhone.</p>
+    </header>
+
+    <section class="panel" aria-labelledby="features-title">
+      <h2 id="features-title">Features</h2>
+      <ul>
+        <li>Single Player games against Alfred</li>
+        <li>Pass &amp; Play for two players sharing one iPhone</li>
+        <li>Choice of 3 × 3, 4 × 4, and 5 × 5 boards</li>
+        <li>Three, four, or five-in-a-row win rules where available</li>
+        <li>Tap-to-place and direct drag controls</li>
+        <li>Fun, Challenging, and Expert Alfred modes</li>
+        <li>Single Player statistics organized by game configuration</li>
+        <li>Optional sound, haptics, and early draw detection</li>
+      </ul>
+    </section>
+
+    <section class="panel" aria-labelledby="faq-title">
+      <h2 id="faq-title">Frequently Asked Questions</h2>
+      <div class="faq-grid">
+        <article>
+          <h3>How do I play?</h3>
+          <p>Place your X or O on an empty space. Be the first player to make the required number in a row horizontally, vertically, or diagonally.</p>
+        </article>
+        <article>
+          <h3>How do I place a piece?</h3>
+          <p>Tap an available board space to send the staged piece there, or drag the staged piece directly to the space you want.</p>
+        </article>
+        <article>
+          <h3>What are the locked spaces?</h3>
+          <p>Three to Win on the larger boards begins with selected spaces locked. Random locks dissolve as the game progresses, creating a less predictable opening.</p>
+        </article>
+        <article>
+          <h3>What do Alfred's modes mean?</h3>
+          <p>Fun provides a relaxed game, Challenging plays a more thoughtful strategy, and Expert gives Alfred his strongest play.</p>
+        </article>
+        <article>
+          <h3>How does Undo work?</h3>
+          <p>Undo is one logical step deep. In Single Player it returns to your previous decision. In Pass &amp; Play it removes the latest move.</p>
+        </article>
+        <article>
+          <h3>What is an early draw?</h3>
+          <p>When Declare Early Draw is enabled, a round ends as soon as neither player has a possible winning line remaining.</p>
+        </article>
+        <article>
+          <h3>Can Zig Zag Zō be played offline?</h3>
+          <p>Yes. Zig Zag Zō is designed for completely offline gameplay and does not require an internet connection.</p>
+        </article>
+        <article>
+          <h3>How do I reset statistics?</h3>
+          <p>Open Statistics from the home screen and choose Reset All Statistics. The App will ask for confirmation before removing them.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="support-grid">
+      <article class="panel">
+        <h2>Privacy</h2>
+        <p>Zig Zag Zō does not require account creation and does not use advertising, analytics, or tracking.</p>
+        <p><a href="zigzagzoe-privacy.html">View Privacy Policy &gt;</a></p>
+      </article>
+
+      <article class="panel">
+        <h2>Support</h2>
+        <p>Your feedback is appreciated. Send questions, suggestions, and bug reports to:</p>
+        <p><a href="mailto:ratterman.apps@gmail.com">ratterman.apps@gmail.com</a></p>
+        <p>Allow up to 14 business days for responses.</p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
