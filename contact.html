@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Me | Joe Ratterman</title>
+  <meta name="description" content="Contact Joe Ratterman.">
+  <link rel="stylesheet" href="css/styles.css?v=20260604h">
+</head>
+<body>
+  <header class="site-header site-header-compact">
+    <a class="logo-link" href="index.html" aria-label="Joe Ratterman home">
+      <img class="site-logo" src="images/joeratterman.webp" alt="joeratterman.com">
+    </a>
+
+    <nav class="site-nav" aria-label="Main menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="resources.html">Resources</a>
+      <a href="projects.html">Projects</a>
+      <a href="files.html">Files</a>
+    </nav>
+  </header>
+
+  <main class="page-main contact-page">
+    <section class="contact-section">
+      <div class="contact-intro">
+        <p class="eyebrow">CONTACT JOE RATTERMAN</p>
+        <p>Use the form below to send me a note. Please include either an email address or phone number so I know how to get back to you.</p>
+      </div>
+
+      <form class="contact-form" action="https://formspree.io/f/mbgljebg" method="POST" id="contact-form">
+        <input type="text" name="_gotcha" class="honeypot-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="form-field">
+          <label for="name">Name <span aria-hidden="true">*</span></label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email">
+          </div>
+
+          <div class="form-field">
+            <label for="phone">Phone number</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="message">Message <span aria-hidden="true">*</span></label>
+          <textarea id="message" name="message" rows="7" autocomplete="off" required></textarea>
+        </div>
+
+        <button class="button-link form-submit-button" type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Copyright © 2010-2026 joeratterman.com</p>
+  </footer>
+
+  <script>
+    const contactForm = document.getElementById("contact-form");
+    const emailInput = document.getElementById("email");
+    const phoneInput = document.getElementById("phone");
+
+    const validateContactMethod = () => {
+      const hasEmail = emailInput.value.trim() !== "";
+      const hasPhone = phoneInput.value.trim() !== "";
+      const message = hasEmail || hasPhone ? "" : "Please provide an email address or phone number.";
+
+      emailInput.setCustomValidity(message);
+      phoneInput.setCustomValidity(message);
+    };
+
+    emailInput.addEventListener("input", validateContactMethod);
+    phoneInput.addEventListener("input", validateContactMethod);
+    contactForm.addEventListener("submit", (event) => {
+      validateContactMethod();
+
+      if (!contactForm.checkValidity()) {
+        event.preventDefault();
+        contactForm.reportValidity();
+      }
+    });
+  </script>
+</body>
+</html>

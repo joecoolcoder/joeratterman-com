@@ -239,48 +239,128 @@ a {
   margin-top: 8px;
 }
 
-.linkedin-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 13px;
-  width: auto;
-  min-width: 270px;
-  margin-top: 8px;
-  padding: 14px 22px;
-  background: #0a66c2;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: background-color 150ms ease, transform 150ms ease;
+.about-modern-intro .button-link {
+  vertical-align: top;
 }
 
-.linkedin-button:hover,
-.linkedin-button:focus-visible {
-  background: #004182;
-  transform: translateY(-1px);
+.linkedin-button {
+  gap: 9px;
 }
 
 .linkedin-mark {
   display: inline-grid;
   place-items: center;
-  width: 34px;
-  height: 34px;
-  background: #ffffff;
-  color: #0a66c2;
+  width: 14px;
+  height: 14px;
+  background: var(--accent);
+  color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: 0;
   line-height: 1;
   text-transform: none;
 }
 
+.linkedin-button:hover .linkedin-mark,
+.linkedin-button:focus-visible .linkedin-mark {
+  background: #ffffff;
+  color: var(--accent);
+}
+
 .about-modern-sections {
   display: grid;
   gap: 42px;
+}
+
+.contact-page {
+  max-width: 980px;
+  padding-bottom: 56px;
+}
+
+.contact-section {
+  padding: 54px 62px;
+  background: #f7f7fb;
+  border: 1px solid #e4e4ef;
+}
+
+.contact-intro {
+  max-width: 720px;
+  margin-bottom: 36px;
+}
+
+.contact-intro h1 {
+  margin: 0 0 18px;
+  color: #141414;
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1.05;
+}
+
+.contact-intro p:last-child {
+  margin: 0;
+  color: #4c4c4c;
+  font-size: 20px;
+  line-height: 1.58;
+}
+
+.contact-form {
+  display: grid;
+  gap: 22px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.form-field {
+  display: grid;
+  gap: 8px;
+}
+
+.form-field label {
+  color: #202020;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 14px 16px;
+  background: #ffffff;
+  color: #202020;
+  font: inherit;
+  border: 1px solid #d9d9e8;
+  border-radius: 0;
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 180px;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: 3px solid rgb(51 52 216 / 18%);
+  border-color: var(--accent);
+}
+
+.honeypot-field {
+  position: absolute;
+  left: -9999px;
+}
+
+.form-submit-button {
+  justify-self: start;
+  cursor: pointer;
+}
+
+.form-submit-button::after {
+  content: ">";
 }
 
 .modern-section {
@@ -1207,6 +1287,14 @@ a {
     padding: 32px 24px;
   }
 
+  .contact-section {
+    padding: 32px 24px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
   .project-card {
     padding: 32px 24px;
   }
@@ -1259,11 +1347,6 @@ a {
   .featured-resource em {
     grid-column: auto;
     width: fit-content;
-  }
-
-  .linkedin-button {
-    width: 100%;
-    min-width: 0;
   }
 
   .personal-inline-photo {
