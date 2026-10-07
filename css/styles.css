@@ -97,16 +97,12 @@ a {
   padding-bottom: 56px;
 }
 
-.hero-image {
-  width: 100%;
-  max-width: 680px;
-  margin: 0 auto;
-}
-
-.hero-image img {
+.goodwords-frame {
   display: block;
   width: 100%;
-  height: auto;
+  height: 1px;
+  border: 0;
+  overflow: hidden;
 }
 
 .content-page {

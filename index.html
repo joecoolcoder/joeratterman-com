@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Joe Ratterman</title>
   <meta name="description" content="Joe Ratterman personal website.">
-  <link rel="stylesheet" href="css/styles.css?v=20260604h">
+  <link rel="stylesheet" href="css/styles.css?v=20261007">
 </head>
 <body>
   <header class="site-header">
@@ -23,13 +23,27 @@
   </header>
 
   <main class="page-main home-main">
-    <section class="hero-image" aria-label="Grace verse graphic">
-      <img src="images/main-graphic.webp" alt="As each has received a gift, use it to serve one another, as good stewards of God's varied grace. 1 Peter 4:10.">
-    </section>
+    <iframe id="goodwords-frame" class="goodwords-frame" title="Good Words daily verse, quote, and joke" referrerpolicy="origin" scrolling="no"></iframe>
   </main>
 
   <footer class="site-footer">
     <p>Copyright © 2010-2026 joeratterman.com</p>
   </footer>
+  <script>
+    const goodwordsFrame = document.querySelector('#goodwords-frame');
+    const localPreview = ['localhost', '127.0.0.1'].includes(location.hostname) &&
+      new URLSearchParams(location.search).get('goodwords') === 'local';
+    const goodwordsUrl = new URL(localPreview ? 'http://127.0.0.1:8787/' : 'https://goodwords.today/');
+    goodwordsUrl.searchParams.set('embed', '1');
+    window.addEventListener('message', event => {
+      if (event.source !== goodwordsFrame.contentWindow || event.origin !== goodwordsUrl.origin) return;
+      if (event.data?.type !== 'goodwords:height') return;
+      const height = event.data.height;
+      if (Number.isSafeInteger(height) && height > 0 && height < 1000000) {
+        goodwordsFrame.style.height = `${height}px`;
+      }
+    });
+    goodwordsFrame.src = goodwordsUrl.href;
+  </script>
 </body>
 </html>
