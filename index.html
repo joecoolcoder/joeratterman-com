@@ -23,6 +23,9 @@
   </header>
 
   <main class="page-main home-main">
+    <div id="goodwords-fallback" class="goodwords-fallback">
+      <a href="https://goodwords.today/">Read today's Good Words</a>
+    </div>
     <iframe id="goodwords-frame" class="goodwords-frame" title="Good Words daily verse, quote, and joke" referrerpolicy="origin" scrolling="no"></iframe>
   </main>
 
@@ -31,6 +34,7 @@
   </footer>
   <script>
     const goodwordsFrame = document.querySelector('#goodwords-frame');
+    const goodwordsFallback = document.querySelector('#goodwords-fallback');
     const localPreview = ['localhost', '127.0.0.1'].includes(location.hostname) &&
       new URLSearchParams(location.search).get('goodwords') === 'local';
     const goodwordsUrl = new URL(localPreview ? 'http://127.0.0.1:8787/' : 'https://goodwords.today/');
@@ -41,6 +45,8 @@
       const height = event.data.height;
       if (Number.isSafeInteger(height) && height > 0 && height < 1000000) {
         goodwordsFrame.style.height = `${height}px`;
+        goodwordsFrame.classList.add('is-ready');
+        goodwordsFallback.hidden = true;
       }
     });
     goodwordsFrame.src = goodwordsUrl.href;

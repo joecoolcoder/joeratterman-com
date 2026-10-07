@@ -103,6 +103,28 @@ a {
   height: 1px;
   border: 0;
   overflow: hidden;
+  visibility: hidden;
+}
+
+.goodwords-frame.is-ready {
+  visibility: visible;
+}
+
+.goodwords-fallback {
+  padding: 96px 24px;
+  background: #faf9f6;
+  color: #3c5675;
+  text-align: center;
+}
+
+.goodwords-fallback[hidden] {
+  display: none;
+}
+
+.goodwords-fallback a {
+  color: inherit;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .content-page {
