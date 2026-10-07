@@ -94,7 +94,7 @@ a {
 }
 
 .home-main {
-  padding-bottom: 56px;
+  padding-bottom: 24px;
 }
 
 .goodwords-frame {
@@ -1156,9 +1156,12 @@ a {
     letter-spacing: 0.24em;
   }
 
-  .home-main,
   .content-page {
     padding-bottom: 44px;
+  }
+
+  .home-main {
+    padding-bottom: 16px;
   }
 
   .about-modern-hero,
