@@ -26,7 +26,7 @@
     <div id="goodwords-fallback" class="goodwords-fallback">
       <a href="https://goodwords.today/">Read today's Good Words</a>
     </div>
-    <iframe id="goodwords-frame" class="goodwords-frame" title="Good Words daily verse, quote, and joke" referrerpolicy="origin" scrolling="no"></iframe>
+    <iframe id="goodwords-frame" class="goodwords-frame" title="Good Words daily verse and quote" referrerpolicy="origin" scrolling="no"></iframe>
   </main>
 
   <footer class="site-footer">
@@ -39,6 +39,8 @@
       new URLSearchParams(location.search).get('goodwords') === 'local';
     const goodwordsUrl = new URL(localPreview ? 'http://127.0.0.1:8787/' : 'https://goodwords.today/');
     goodwordsUrl.searchParams.set('embed', '1');
+    goodwordsUrl.searchParams.set('noHeader', '1');
+    goodwordsUrl.searchParams.set('noJoke', '1');
     window.addEventListener('message', event => {
       if (event.source !== goodwordsFrame.contentWindow || event.origin !== goodwordsUrl.origin) return;
       if (event.data?.type !== 'goodwords:height') return;
