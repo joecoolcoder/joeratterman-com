@@ -94,37 +94,90 @@ a {
 }
 
 .home-main {
-  padding-bottom: 24px;
+  padding-bottom: 56px;
 }
 
-.goodwords-frame {
+.hero-image {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.hero-image img {
   display: block;
   width: 100%;
-  height: 1px;
-  border: 0;
-  overflow: hidden;
-  visibility: hidden;
+  height: auto;
 }
 
-.goodwords-frame.is-ready {
-  visibility: visible;
+.daily-panels {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  width: min(680px, 100%);
+  margin: 28px auto 0;
 }
 
-.goodwords-fallback {
-  padding: 96px 24px;
+.daily-panel {
+  min-width: 0;
+  padding: 18px 20px;
+  background: #f7f7fb;
+  border: 1px solid #e4e4ef;
+  border-top: 2px solid var(--accent);
+}
+
+.daily-panel-quote {
   background: #faf9f6;
-  color: #3c5675;
-  text-align: center;
+  border-color: #e7e3da;
+  border-top-color: #a17a35;
 }
 
-.goodwords-fallback[hidden] {
-  display: none;
-}
-
-.goodwords-fallback a {
-  color: inherit;
-  font-size: 24px;
+.daily-panel-heading h2 {
+  margin: 0;
+  color: #303764;
+  font-size: 16px;
   font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.daily-panel-quote .daily-panel-heading h2 {
+  color: #85631e;
+}
+
+.daily-panel-heading time {
+  display: block;
+  min-height: 20px;
+  margin-top: 10px;
+  color: #626879;
+  font-size: 14px;
+}
+
+.daily-panel-body {
+  padding-top: 16px;
+}
+
+.daily-text {
+  margin: 0;
+  color: #30384b;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 16px;
+  line-height: 1.5;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+.daily-status {
+  margin: 0;
+  color: #626879;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.daily-copyright {
+  margin: 10px 0 0;
+  color: #666b76;
+  font-size: 12px;
+  line-height: 1.4;
 }
 
 .content-page {
@@ -525,8 +578,8 @@ a {
   transition: border-color 150ms ease, transform 150ms ease;
 }
 
-.resource-link:hover,
-.resource-link:focus-visible {
+a.resource-link:hover,
+a.resource-link:focus-visible {
   border-color: var(--accent);
   transform: translateY(-1px);
 }
@@ -544,6 +597,11 @@ a {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+}
+
+.resource-pending small {
+  background: #e4e4ec;
+  color: #53545e;
 }
 
 .featured-resource {
@@ -1161,7 +1219,7 @@ a {
   }
 
   .home-main {
-    padding-bottom: 16px;
+    padding-bottom: 44px;
   }
 
   .about-modern-hero,
@@ -1252,6 +1310,16 @@ a {
 }
 
 @media (max-width: 620px) {
+  .daily-panels {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .daily-panel {
+    padding: 16px 18px;
+  }
+
   .site-header,
   .page-main,
   .site-footer {

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Joe Ratterman</title>
   <meta name="description" content="Joe Ratterman personal website.">
-  <link rel="stylesheet" href="css/styles.css?v=20261007b">
+  <link rel="stylesheet" href="css/styles.css?v=20261007d">
 </head>
 <body>
   <header class="site-header">
@@ -23,35 +23,137 @@
   </header>
 
   <main class="page-main home-main">
-    <div id="goodwords-fallback" class="goodwords-fallback">
-      <a href="https://goodwords.today/">Read today's Good Words</a>
+    <section class="hero-image" aria-label="Grace verse graphic">
+      <img src="images/main-graphic.webp" alt="As each has received a gift, use it to serve one another, as good stewards of God's varied grace. 1 Peter 4:10.">
+    </section>
+
+    <div class="daily-panels">
+      <section class="daily-panel daily-panel-verse" aria-labelledby="verse-heading" aria-busy="true">
+        <div class="daily-panel-heading">
+          <h2 id="verse-heading">Verse of the Day</h2>
+          <time id="verse-date"></time>
+        </div>
+        <div class="daily-panel-body">
+          <p id="verse-status" class="daily-status" role="status">Loading today's verse...</p>
+          <blockquote id="verse-text" class="daily-text" hidden></blockquote>
+        </div>
+        <p id="verse-copyright" class="daily-copyright" hidden></p>
+      </section>
+
+      <section class="daily-panel daily-panel-quote" aria-labelledby="quote-heading" aria-busy="true">
+        <div class="daily-panel-heading">
+          <h2 id="quote-heading">Quote of the Day</h2>
+          <time id="quote-date"></time>
+        </div>
+        <div class="daily-panel-body">
+          <p id="quote-status" class="daily-status" role="status">Loading today's quote...</p>
+          <blockquote id="quote-text" class="daily-text" hidden></blockquote>
+        </div>
+      </section>
     </div>
-    <iframe id="goodwords-frame" class="goodwords-frame" title="Good Words daily verse and quote" referrerpolicy="origin" scrolling="no"></iframe>
   </main>
 
   <footer class="site-footer">
     <p>Copyright © 2010-2026 joeratterman.com</p>
   </footer>
   <script>
-    const goodwordsFrame = document.querySelector('#goodwords-frame');
-    const goodwordsFallback = document.querySelector('#goodwords-fallback');
-    const localPreview = ['localhost', '127.0.0.1'].includes(location.hostname) &&
-      new URLSearchParams(location.search).get('goodwords') === 'local';
-    const goodwordsUrl = new URL(localPreview ? 'http://127.0.0.1:8787/' : 'https://goodwords.today/');
-    goodwordsUrl.searchParams.set('embed', '1');
-    goodwordsUrl.searchParams.set('noHeader', '1');
-    goodwordsUrl.searchParams.set('noJoke', '1');
-    window.addEventListener('message', event => {
-      if (event.source !== goodwordsFrame.contentWindow || event.origin !== goodwordsUrl.origin) return;
-      if (event.data?.type !== 'goodwords:height') return;
-      const height = event.data.height;
-      if (Number.isSafeInteger(height) && height > 0 && height < 1000000) {
-        goodwordsFrame.style.height = `${height}px`;
-        goodwordsFrame.classList.add('is-ready');
-        goodwordsFallback.hidden = true;
-      }
+    const dailyDateFormatter = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC' });
+    const chicagoDateFormatter = new Intl.DateTimeFormat('en-US', {
+      timeZone: 'America/Chicago', year: 'numeric', month: '2-digit', day: '2-digit'
     });
-    goodwordsFrame.src = goodwordsUrl.href;
+    const dailySources = {
+      verse: 'daily-passage',
+      quote: 'daily-quote'
+    };
+    let loadedDate = null;
+    let loadingDaily = false;
+
+    function chicagoToday() {
+      const parts = Object.fromEntries(chicagoDateFormatter.formatToParts(new Date()).map(part => [part.type, part.value]));
+      return `${parts.year}-${parts.month}-${parts.day}`;
+    }
+
+    function validDaily(kind, item) {
+      const parsedDate = item && /^\d{4}-\d{2}-\d{2}$/.test(item.date)
+        ? new Date(`${item.date}T12:00:00Z`) : null;
+      return parsedDate && Number.isFinite(parsedDate.getTime()) &&
+        parsedDate.toISOString().slice(0, 10) === item.date &&
+        typeof item.text === 'string' && item.text.trim() &&
+        (kind === 'verse'
+          ? ['reference', 'translation', 'copyright'].every(field => typeof item[field] === 'string' && item[field].trim())
+          : typeof item.author === 'string');
+    }
+
+    async function getDaily(kind, today) {
+      const cacheKey = `goodwords:${dailySources[kind]}:v1`;
+      try {
+        const cached = JSON.parse(localStorage.getItem(cacheKey));
+        if (cached?.date === today && validDaily(kind, cached)) return cached;
+      } catch { /* Browser storage may be unavailable. */ }
+
+      const response = await fetch(`https://goodwords.today/api/${dailySources[kind]}`, {
+        cache: 'no-store', signal: AbortSignal.timeout(15000)
+      });
+      if (!response.ok) throw new Error('Daily content unavailable');
+      const item = await response.json();
+      if (!validDaily(kind, item)) throw new Error('Incomplete daily content');
+      if (item.date === today) {
+        try { localStorage.setItem(cacheKey, JSON.stringify(item)); } catch { /* Keep using the fetched item. */ }
+      }
+      return item;
+    }
+
+    function renderDaily(kind, result) {
+      const panel = document.querySelector(`.daily-panel-${kind}`);
+      const status = document.querySelector(`#${kind}-status`);
+      const text = document.querySelector(`#${kind}-text`);
+      const copyright = document.querySelector('#verse-copyright');
+      const date = document.querySelector(`#${kind}-date`);
+      panel.setAttribute('aria-busy', 'false');
+
+      if (result.status === 'rejected') {
+        date.textContent = '';
+        text.hidden = true;
+        if (kind === 'verse') copyright.hidden = true;
+        status.textContent = `Today's ${kind} is unavailable. Please try again later.`;
+        status.hidden = false;
+        return null;
+      }
+
+      const item = result.value;
+      date.dateTime = item.date;
+      date.textContent = dailyDateFormatter.format(new Date(`${item.date}T12:00:00Z`));
+      text.textContent = kind === 'verse'
+        ? `${item.text} - ${item.reference} (${item.translation})`
+        : `${item.text}${item.author ? ` - ${item.author}` : ''}`;
+      text.hidden = false;
+      status.hidden = true;
+      if (kind === 'verse') {
+        copyright.textContent = item.copyright;
+        copyright.hidden = false;
+      }
+      return item.date;
+    }
+
+    async function loadDaily() {
+      if (loadingDaily) return;
+      loadingDaily = true;
+      const today = chicagoToday();
+      const results = await Promise.allSettled([getDaily('verse', today), getDaily('quote', today)]);
+      const verseDate = renderDaily('verse', results[0]);
+      const quoteDate = renderDaily('quote', results[1]);
+      loadedDate = verseDate === quoteDate ? verseDate : null;
+      loadingDaily = false;
+    }
+
+    function refreshIfNeeded() {
+      if (!document.hidden && loadedDate !== chicagoToday()) loadDaily();
+    }
+
+    window.addEventListener('online', refreshIfNeeded);
+    document.addEventListener('visibilitychange', refreshIfNeeded);
+    window.setInterval(refreshIfNeeded, 60000);
+    loadDaily();
   </script>
 </body>
 </html>
