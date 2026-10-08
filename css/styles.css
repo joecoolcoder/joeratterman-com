@@ -130,13 +130,13 @@ a {
   transition: box-shadow 150ms ease, transform 150ms ease;
 }
 
-.daily-panel:hover,
-.daily-panel:focus-within {
+.daily-panel:hover {
   box-shadow: 0 4px 14px rgb(0 0 0 / 8%);
   transform: translateY(-1px);
 }
 
-.daily-panel:focus-within {
+.daily-panel:focus-visible,
+.daily-panel:has(:focus-visible) {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
