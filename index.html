@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Joe Ratterman</title>
   <meta name="description" content="Joe Ratterman personal website.">
-  <link rel="stylesheet" href="css/styles.css?v=20261007f">
+  <link rel="stylesheet" href="css/styles.css?v=20261008a">
 </head>
 <body>
   <header class="site-header">
@@ -28,17 +28,19 @@
     </section>
 
     <div class="daily-panels">
-      <a class="daily-panel daily-panel-verse" href="https://goodwords.today" target="_blank" rel="noopener noreferrer" aria-labelledby="verse-heading" aria-busy="true">
-        <div class="daily-panel-heading">
-          <h2 id="verse-heading">Verse of the Day</h2>
-          <time id="verse-date"></time>
-        </div>
-        <div class="daily-panel-body">
-          <p id="verse-status" class="daily-status" role="status">Loading today's verse...</p>
-          <blockquote id="verse-text" class="daily-text" hidden></blockquote>
-        </div>
-        <p id="verse-copyright" class="daily-copyright" hidden></p>
-      </a>
+      <section class="daily-panel daily-panel-verse" aria-labelledby="verse-heading" aria-busy="true">
+        <a class="daily-panel-main-link" href="https://goodwords.today" target="_blank" rel="noopener noreferrer" aria-labelledby="verse-heading">
+          <div class="daily-panel-heading">
+            <h2 id="verse-heading">Verse of the Day</h2>
+            <time id="verse-date"></time>
+          </div>
+          <div class="daily-panel-body">
+            <p id="verse-status" class="daily-status" role="status">Loading today's verse...</p>
+            <blockquote id="verse-text" class="daily-text" hidden></blockquote>
+          </div>
+        </a>
+        <a id="verse-copyright" class="daily-copyright" target="_blank" rel="noopener noreferrer" hidden></a>
+      </section>
 
       <a class="daily-panel daily-panel-quote" href="https://goodwords.today" target="_blank" rel="noopener noreferrer" aria-labelledby="quote-heading" aria-busy="true">
         <div class="daily-panel-heading">
@@ -65,6 +67,7 @@
       verse: 'daily-passage',
       quote: 'daily-quote'
     };
+    const dailyCacheVersions = { verse: 'v2', quote: 'v1' };
     let loadedDate = null;
     let loadingDaily = false;
 
@@ -85,7 +88,7 @@
     }
 
     async function getDaily(kind, today) {
-      const cacheKey = `goodwords:${dailySources[kind]}:v1`;
+      const cacheKey = `goodwords:${dailySources[kind]}:${dailyCacheVersions[kind]}`;
       try {
         const cached = JSON.parse(localStorage.getItem(cacheKey));
         if (cached?.date === today && validDaily(kind, cached)) return cached;
@@ -130,6 +133,15 @@
       status.hidden = true;
       if (kind === 'verse') {
         copyright.textContent = item.copyright;
+        let sourceUrl = null;
+        if (typeof item.sourceLink === 'string' && item.sourceLink.trim()) {
+          try {
+            const url = new URL(item.sourceLink);
+            if (url.protocol === 'https:' || url.protocol === 'http:') sourceUrl = url.href;
+          } catch { /* Leave the notice as plain text. */ }
+        }
+        if (sourceUrl) copyright.href = sourceUrl;
+        else copyright.removeAttribute('href');
         copyright.hidden = false;
       }
       return item.date;

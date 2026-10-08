@@ -119,6 +119,7 @@ a {
 
 .daily-panel {
   display: block;
+  position: relative;
   min-width: 0;
   padding: 18px 20px;
   background: #f7f7fb;
@@ -130,14 +131,25 @@ a {
 }
 
 .daily-panel:hover,
-.daily-panel:focus-visible {
+.daily-panel:focus-within {
   box-shadow: 0 4px 14px rgb(0 0 0 / 8%);
   transform: translateY(-1px);
 }
 
-.daily-panel:focus-visible {
+.daily-panel:focus-within {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
+}
+
+.daily-panel-main-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.daily-panel-main-link::after {
+  position: absolute;
+  inset: 0;
+  content: "";
 }
 
 .daily-panel-quote {
@@ -189,10 +201,26 @@ a {
 }
 
 .daily-copyright {
+  display: block;
+  position: relative;
+  z-index: 1;
   margin: 10px 0 0;
   color: #666b76;
   font-size: 12px;
   line-height: 1.4;
+}
+
+.daily-copyright[hidden] {
+  display: none;
+}
+
+.daily-copyright:not([href]) {
+  pointer-events: none;
+}
+
+.daily-copyright[href] {
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .content-page {
