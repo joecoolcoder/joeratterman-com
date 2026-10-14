@@ -6,6 +6,8 @@
   <title>Contact Me | Joe Ratterman</title>
   <meta name="description" content="Contact Joe Ratterman.">
   <link rel="stylesheet" href="css/styles.css?v=20260604h">
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <script src="contact-form.js" defer></script>
 </head>
 <body>
   <header class="site-header site-header-compact">
@@ -29,7 +31,7 @@
         <p>Use the form below to send me a note. Please include either an email address or phone number so I know how to get back to you.</p>
       </div>
 
-      <form class="contact-form" action="https://formspree.io/f/mbgljebg" method="POST" id="contact-form">
+      <form class="contact-form" action="https://my-contact-form.josephpratterman.workers.dev/contact" method="POST" id="contact-form" data-contact-site="joeratterman" data-contact-endpoint="https://my-contact-form.josephpratterman.workers.dev/contact">
         <input type="text" name="_gotcha" class="honeypot-field" tabindex="-1" autocomplete="off" aria-hidden="true">
 
         <div class="form-field">
@@ -54,6 +56,7 @@
           <textarea id="message" name="message" rows="7" autocomplete="off" required></textarea>
         </div>
 
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAAFWv_HzwFF4UEAsW"></div>
         <button class="button-link form-submit-button" type="submit">Send Message</button>
       </form>
     </section>
