@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Good Words Support</title>
+  <meta name="description" content="Support page for Good Words, a daily Bible verse, quote, and humor app for iPhone.">
+  <style>
+    :root {
+      --blue: #243c61;
+      --ink: #202538;
+      --muted: #5b6170;
+      --line: #ddd6c9;
+      --soft: #f8f3e9;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #fffdf9;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    main {
+      width: min(920px, calc(100% - 36px));
+      margin: 0 auto;
+      padding: 54px 0 44px;
+    }
+
+    header { margin-bottom: 34px; }
+
+    h1 {
+      margin: 0 0 14px;
+      color: #1c304e;
+      font-size: clamp(42px, 7vw, 68px);
+      line-height: 0.98;
+      letter-spacing: -0.035em;
+    }
+
+    .tagline {
+      max-width: 650px;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(21px, 3vw, 28px);
+      line-height: 1.35;
+    }
+
+    .panel {
+      margin-top: 22px;
+      padding: 30px 34px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    h2 {
+      margin: 0 0 20px;
+      color: #1c304e;
+      font-size: clamp(25px, 3vw, 32px);
+      line-height: 1.15;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      color: var(--blue);
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0 0 16px;
+      color: #2b3040;
+      font-size: 18px;
+      line-height: 1.58;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    a {
+      color: var(--blue);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus-visible { text-decoration: underline; }
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px 30px;
+      margin: 0;
+      padding-left: 21px;
+      color: #2b3040;
+      font-size: 18px;
+      line-height: 1.45;
+    }
+
+    li { padding-left: 2px; }
+
+    .faq-grid,
+    .support-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px 34px;
+    }
+
+    .support-grid { gap: 22px; }
+
+    @media (max-width: 720px) {
+      main { padding-top: 36px; }
+      .panel { padding: 24px 22px; }
+      ul,
+      .faq-grid,
+      .support-grid { grid-template-columns: 1fr; }
+      p,
+      ul { font-size: 17px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Good Words Support</h1>
+      <p class="tagline">A Little Wisdom, Inspiration, and Humor for Your Day!</p>
+    </header>
+
+    <section class="panel" aria-labelledby="features-title">
+      <h2 id="features-title">Features</h2>
+      <ul>
+        <li>A new Bible verse, quote, and humor entry each day</li>
+        <li>Optional third-party verses and quotes</li>
+        <li>Favorites you can add, import, and revisit</li>
+        <li>Quick Verse lookup and comparison of eight Bible translations</li>
+        <li>Passage study links and full-chapter reading choices</li>
+        <li>A Home Screen widget for today’s Good Words readings</li>
+        <li>Sharing and verse-reference export</li>
+        <li>Optional private iCloud backup of Favorites</li>
+      </ul>
+    </section>
+
+    <section class="panel" aria-labelledby="faq-title">
+      <h2 id="faq-title">Frequently Asked Questions</h2>
+      <div class="faq-grid">
+        <article>
+          <h3>How do I see more daily readings?</h3>
+          <p>Turn on Third Party Content in Settings. On the Home screen, use the arrows beside a source icon or swipe left and right to move through available readings.</p>
+        </article>
+        <article>
+          <h3>What if I am offline?</h3>
+          <p>When today’s download is unavailable, Good Words can show a reading from its small built-in offline collection. Internet feeds, passage lookups, and online study links need a connection.</p>
+        </article>
+        <article>
+          <h3>How do Favorites work?</h3>
+          <p>Tap a daily reading to save it, or open My Favorites to add your own. Favorites are stored on your iPhone. Set their display frequency in Settings, or pin one to keep it on the Good Words Home screen.</p>
+        </article>
+        <article>
+          <h3>How do I look up a passage?</h3>
+          <p>Choose Quick Verse from the Home screen menu, enter a reference, and tap Preview. Use Compare to view available translations or Tools to open study and full-chapter links.</p>
+        </article>
+        <article>
+          <h3>What does the widget show?</h3>
+          <p>The widget shows today’s Good Words verse, quote, or humor entry. Tap its category tabs to switch between them. Favorites and optional third-party readings are available in the full app.</p>
+        </article>
+        <article>
+          <h3>Does iCloud Backup sync my devices?</h3>
+          <p>No. In Settings, Back Up Now saves a copy of your Favorites to your private iCloud database. Restore Backup replaces the Favorites on the current device; it does not continuously sync them. You can also delete the backup there.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="support-grid">
+      <article class="panel">
+        <h2>Privacy</h2>
+        <p>Good Words does not require an account with the developer and does not include advertising or tracking. It uses online services for daily content and passage lookups; your Favorites remain on your device unless you choose iCloud Backup.</p>
+        <p><a href="goodwords-privacy.html">View Privacy Policy &gt;</a></p>
+      </article>
+
+      <article class="panel">
+        <h2>Support</h2>
+        <p>Your feedback is appreciated. Send questions, suggestions, and bug reports to:</p>
+        <p><a href="mailto:ratterman.apps@gmail.com">ratterman.apps@gmail.com</a></p>
+        <p>Allow up to 14 business days for responses.</p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
