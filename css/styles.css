@@ -599,6 +599,10 @@ a {
   line-height: 1.58;
 }
 
+.resource-section-intro .resource-section-followup {
+  margin-top: 12px;
+}
+
 .resource-section-intro a {
   color: #2e35db;
 }
