@@ -621,6 +621,39 @@ a {
   transition: border-color 150ms ease, transform 150ms ease;
 }
 
+.resource-app-group {
+  padding: 18px 20px 6px;
+  background: #ffffff;
+  border: 1px solid #e3e3ec;
+}
+
+.resource-app-group h3 {
+  margin: 0 0 12px;
+  color: #202020;
+  font-size: 19px;
+  line-height: 1.35;
+}
+
+.resource-app-platform {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+  padding: 12px 0;
+  color: #202020;
+  text-decoration: none;
+}
+
+a.resource-app-platform:hover,
+a.resource-app-platform:focus-visible {
+  color: var(--accent);
+}
+
+.resource-app-platform span {
+  font-size: 17px;
+  line-height: 1.35;
+}
+
 a.resource-link:hover,
 a.resource-link:focus-visible {
   border-color: var(--accent);
@@ -632,7 +665,8 @@ a.resource-link:focus-visible {
   line-height: 1.35;
 }
 
-.resource-link small {
+.resource-link small,
+.resource-app-platform small {
   padding: 7px 10px;
   background: #3334d8;
   color: #ffffff;
@@ -1475,7 +1509,13 @@ a.resource-link:focus-visible {
     gap: 12px;
   }
 
+  .resource-app-platform {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
   .resource-link small,
+  .resource-app-platform small,
   .featured-resource em {
     grid-column: auto;
     width: fit-content;
